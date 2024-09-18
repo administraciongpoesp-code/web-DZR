@@ -1,18 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Contacto</a>
-        <a href="#">Galeria</a>
-        <a href="#">Acerca de</a>
-    </nav>
-    
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Tienda de Moda</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <section id="inicio">
+        <h2>Bienvenidos a la Tienda de Moda</h2>
+        <p>Explora las últimas tendencias en ropa y accesorios.</p>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="galeria-contenedor">
+            <div class="imagen-galeria">
+                <img src="imagen1.jpg" alt="Prenda 1">
+            </div>
+            <div class="imagen-galeria">
+                <img src="imagen2.jpg" alt="Prenda 2">
+            </div>
+            <div class="imagen-galeria">
+                <img src="imagen3.jpg" alt="Prenda 3">
+            </div>
+            <div class="imagen-galeria">
+                <img src="imagen4.jpg" alt="Prenda 4">
+            </div>
+            <!-- Añadir más imágenes según sea necesario -->
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="#">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tienda de Moda. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
