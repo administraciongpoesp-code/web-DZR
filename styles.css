@@ -259,6 +259,16 @@ nav {
   gap: 2rem;
 }
 
+.about__container__about {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  
+}
 .about__image img {
   max-width: 450px;
   margin: auto;
