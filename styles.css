@@ -7,8 +7,8 @@
   --text-light: #78716c;
   --white: #ffffff;
   --max-width: 1200px;
-  --max-width-nav:100%;
-  --secondary-color-grey:#1C1C1C;
+  --max-width-nav: 100%;
+  --secondary-color-grey: #1c1c1c;
 }
 
 * {
@@ -23,17 +23,17 @@
   padding: 3rem 1rem;
 }
 
-.section__background__color{
+.section__background__color {
   background-color: var(--secondary-color-grey);
 }
-.section__background{
+.section__background {
   border-radius: inherit;
   position: absolute;
   width: 100%;
   height: 28rem;
   z-index: -1;
 }
-.section__background__product{
+.section__background__product {
   border-radius: inherit;
   position: absolute;
   width: 100%;
@@ -115,7 +115,6 @@
   background-color: var(--primary-color);
 }
 
-
 .section__description {
   max-width: 600px;
   margin-bottom: 1rem;
@@ -181,9 +180,9 @@ body {
   background-repeat: no-repeat;
   height: 90vh;
 }
- /*Video de Fondo CSS Prueba*/
- 
- .bg-video {
+/*Video de Fondo CSS Prueba*/
+
+.bg-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -195,7 +194,7 @@ body {
 
 /*Header Uniformes*/
 .header__uniformes {
-  background-image:url("assets/uniformes.jpg");
+  background-image: url("assets/uniformes.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,7 +202,7 @@ body {
 }
 
 .header__servicios {
-  background-image:url("assets/service.jpg");
+  background-image: url("assets/service.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -221,10 +220,10 @@ nav {
   z-index: 9;
   background-color: white;
 }
-.ri-menu-line{
+.ri-menu-line {
   color: #0c0a09;
 }
-.ri-close-line{
+.ri-close-line {
   color: #0c0a09;
 }
 
@@ -234,7 +233,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-
 }
 
 .nav__menu__btn {
@@ -253,12 +251,11 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color:var(--white);
+  background-color: var(--white);
   transform: translateY(-130%);
   transition: 0.5s;
   z-index: -1;
 }
-
 
 .nav__links.open {
   transform: translateY(0);
@@ -299,6 +296,30 @@ nav {
 
 .header__container h1 span {
   color: var(--primary-color);
+}
+
+.btn__whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.btn__whatsapp span {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
 }
 
 .booking__container {
@@ -364,7 +385,6 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   font-size: 1.7rem;
-  
 }
 .about__image img {
   max-width: 450px;
@@ -501,7 +521,7 @@ nav {
 }
 
 .service__list li:nth-child(2) span {
-  color:var(--primary-color);
+  color: var(--primary-color);
   background-color: #fce7f3;
 }
 
@@ -511,7 +531,7 @@ nav {
 }
 
 .service__list li:nth-child(4) span {
-  color:var(--primary-color);
+  color: var(--primary-color);
   background-color: #ffe4e6;
 }
 
@@ -520,19 +540,21 @@ nav {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 600px;
 }
 .contact-form h2 {
   margin-bottom: 15px;
 }
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--text-light);
   border-radius: 3px;
+  font-family: "Poppins", sans-serif;
 }
 .contact-form button {
   background-color: #28a745;
@@ -544,9 +566,8 @@ nav {
   width: 100%;
 }
 .contact-form button:hover {
-  background-color: #218838;
+  background-color: #17722a;
 }
-
 /*Termino de Formulario*/
 
 .banner__content {
@@ -734,8 +755,6 @@ nav {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
-
 
 @media (width > 576px) {
   .room__grid {
