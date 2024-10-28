@@ -30,11 +30,9 @@
       </nav>
       
       <!-- Video de Fondo-->
-      <!-- <video class="bg-video" autoplay muted loop>
+      <video class="bg-video" autoplay muted loop>
         <source src="/assets/bg_video.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
       </video>
-      -->
       
       <div class="section__container header__container" id="home">
         <p>Calidad - Precio - Seguridad</p>
@@ -42,28 +40,28 @@
       </div>
     </header>
 
+    <!--Barra Acceso Dorectos-->
     <section class="section__container booking__container">
       <form action="https://wa.link/iiwp24" class="booking__form">
         <div class="input__group">
-          <span><i class="ri-calendar-2-fill"></i></span>
+          <span><i class="ri-timer-line"></i></i></span>
           <div>
-            <label for="check-in">Los Mejores Tiempos de Entrega</label>
+            <label for="check-in">Tiempos de Entrega Cortos</label>
             <input type="text" placeholder="Entrega Rapida" />
           </div>
         </div>
-        <!--<div class="input__group">
-          <span><i class="ri-calendar-2-fill"></i></span>
+        <div class="input__group">
+          <span><i class="ri-medal-fill"></i></i></span>
           <div>
-            <label for="check-out">CHECK-OUT</label>
-            <input type="text" placeholder="Check Out" />
+            <label for="check-in">Estandares de Calidad</label>
+            <input type="text" placeholder="Supervision Continua" />
           </div>
         </div>
-        -->
         <div class="input__group">
           <span><i class="ri-user-fill"></i></span>
           <div>
             <label for="guest">Asesoria Personalizada</label>
-            <input type="text" placeholder="Asesoria" />
+            <input type="text" placeholder="Nos Adaptamos a Ti" />
           </div>
         </div>
         <div class="input__group input__btn">
@@ -72,25 +70,7 @@
       </form>
     </section>
 
-    <section class="section__container about__container" id="about">
-      <div class="about__image">
-        <img src="assets/about.jpg" alt="about" />
-      </div>
-      <div class="about__content">
-        <p class="section__subheader">NOSOTROS</p>
-        <h2 class="section__header">El Triunfo Inicia Con Nosotros!</h2>
-        <p class="section__description">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-          Dicta aperiam veniam dolore perspiciatis facere deserunt 
-          accusamus at facilis temporibus quas sapiente magni eos deleniti 
-          architecto modi cupiditate, nobis possimus sit?
-        </p>
-        <div class="about__btn">
-          <button class="btn">Saber Mas</button>
-        </div>
-      </div>
-    </section>
-
+    <!--Prdocustos-->
     <section class="section__container room__container">
       <p class="section__subheader">Nuestros Productos</p>
       <h2 class="section__header">Lleva a tu Equipo a la Gloria.</h2>
@@ -99,9 +79,9 @@
           <div class="room__card__image">
             <img src="assets/room-1.jpg" alt="room" />
             <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
+              <!--<span><i class="ri-heart-fill"></i></span>
               <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>-->
             </div>
           </div>
           <div class="room__card__details">
@@ -118,9 +98,9 @@
           <div class="room__card__image">
             <img src="assets/room-2.jpg" alt="room" />
             <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
+              <!--<span><i class="ri-heart-fill"></i></span>
               <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>-->
             </div>
           </div>
           <div class="room__card__details">
@@ -137,9 +117,9 @@
           <div class="room__card__image">
             <img src="assets/room-3.jpg" alt="room" />
             <div class="room__card__icons">
-              <span><i class="ri-heart-fill"></i></span>
+              <!--<span><i class="ri-heart-fill"></i></span>
               <span><i class="ri-paint-fill"></i></span>
-              <span><i class="ri-shield-star-line"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>-->
             </div>
           </div>
           <div class="room__card__details">
@@ -155,6 +135,23 @@
       </div>
     </section>
 
+    <!--Formulario y Maps-->
+    <section class="section__container about__container" id="about">
+      <div class="about__content">
+        <p class="section__subheader">Contacto</p>
+        <h2 class="section__header">Conocenos!</h2>
+          <br>
+          <form class="contact-form" action="send_mail.php" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.3680998571876!2d-104.64898912432214!3d24.053338578464906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc80478cc1417%3A0x2a40d92284478e7a!2sDezara!5e0!3m2!1ses-419!2smx!4v1729641711792!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!--Calidad-->
     <section class="service" id="service">
       <div class="section__container service__container">
         <div class="service__content">
@@ -182,6 +179,7 @@
       </div>
     </section>
 
+    <!--Experiencia-->
     <section class="section__container banner__container">
       <div class="banner__content">
         <div class="banner__card">
@@ -199,22 +197,27 @@
       </div>
     </section>
 
-    <!--Formulario y Maps-->
+    <!--Nosotros-->
     <section class="section__container about__container" id="about">
-      <div class="about__content">
-        <p class="section__subheader">Contacto</p>
-        <h2 class="section__header">Conocenos!</h2>
-          <br>
-          <form class="contact-form" action="send_mail.php" method="POST">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+      <div class="about__image">
+        <img src="assets/about.jpg" alt="about" />
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.3680998571876!2d-104.64898912432214!3d24.053338578464906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc80478cc1417%3A0x2a40d92284478e7a!2sDezara!5e0!3m2!1ses-419!2smx!4v1729641711792!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="about__content">
+        <p class="section__subheader">NOSOTROS</p>
+        <h2 class="section__header">El Triunfo Inicia Con Nosotros!</h2>
+        <p class="section__description">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Dicta aperiam veniam dolore perspiciatis facere deserunt 
+          accusamus at facilis temporibus quas sapiente magni eos deleniti 
+          architecto modi cupiditate, nobis possimus sit?
+        </p>
+        <div class="about__btn">
+          <button class="btn">Saber Mas</button>
+        </div>
+      </div>
     </section>
 
+    <!--Instagram-->
     <section class="explore" id="explore">
       <p class="section__subheader">Lo + Nuevo</p>
       <h2 class="section__header">LO MAS DESTACADO.</h2>
@@ -226,6 +229,7 @@
         </div>
     </section>
     
+    <!--Footer-->
     <footer class="footer" id="contact">
       <div class="section__container footer__container">
         <div class="footer__col">

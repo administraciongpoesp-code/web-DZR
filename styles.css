@@ -176,16 +176,15 @@ body {
 }
 /*Header Principal*/
 .header {
-  background-image: url("assets/header.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
 }
  /*Video de Fondo CSS Prueba*/
- /*
+ 
  .bg-video {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -193,7 +192,7 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-*/
+
 /*Header Uniformes*/
 .header__uniformes {
   background-image:url("assets/uniformes.jpg");
@@ -211,8 +210,8 @@ body {
   height: 90vh;
 }
 
+/*navegador principal*/
 nav {
-  background-color: var(--white);
   position: fixed;
   isolation: isolate;
   top: 0;
@@ -220,6 +219,13 @@ nav {
   max-width: var(--max-width-nav);
   margin: auto;
   z-index: 9;
+  background-color: white;
+}
+.ri-menu-line{
+  color: #0c0a09;
+}
+.ri-close-line{
+  color: #0c0a09;
 }
 
 .nav__bar {
@@ -237,25 +243,28 @@ nav {
   cursor: pointer;
 }
 
+/*Navegador moviles*/
 .nav__links {
   list-style: none;
   position: absolute;
   width: 100%;
-  padding: 2rem;
+  padding: 2em;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color:var(--primary-color-dark);
-  transform: translateY(-100%);
+  background-color:var(--white);
+  transform: translateY(-130%);
   transition: 0.5s;
   z-index: -1;
 }
+
 
 .nav__links.open {
   transform: translateY(0);
 }
 
+/*edicion links del nav*/
 .nav__links a {
   position: relative;
   isolation: isolate;
@@ -725,17 +734,8 @@ nav {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.buy-button {
-  color: var(--primary-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.buy-button:hover {
-  background-color: #e68a00;
-}
+
+
 
 @media (width > 576px) {
   .room__grid {
