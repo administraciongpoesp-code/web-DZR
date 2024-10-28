@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles.css" />
     <title>DEZARA | Dev JORGE</title>
   </head>
@@ -32,86 +35,154 @@
     </header>
 
     <!--Producto Descripción-->
-    <div class="container">
-        <div class="product">
-            <div class="product-image">
-                <img src="https://via.placeholder.com/400" alt="Imagen del Producto">
-            </div>
-            <div class="product-details">
-                <h1 class="product-title">Nombre del Producto</h1>
-                <p class="product-price">$999.99</p>
-                <p class="product-description">
-                    Este es un breve resumen del producto. Aquí puedes incluir detalles importantes sobre sus características,
-                    especificaciones y beneficios para el cliente. 
-                </p>
-                <button class="buy-button">Cotizar Ahora</button>
-            </div>
+    <div class="section__container__uniforms">
+      <div class="product">
+        <div class="product-image">
+          <img
+            src="https://via.placeholder.com/400"
+            alt="Imagen del Producto"
+          />
         </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Nombre del Producto</h1>
+          <p class="product-price">$999.99</p>
+          <p>
+            Este es un breve resumen del producto. Aquí puedes incluir detalles
+            importantes sobre sus características, especificaciones y beneficios
+            para el cliente.
+          </p>
+          <br />
+          <button class="buy-button">Cotizar Ahora</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Características del producto -->
+    <div class="section__container__uniforms">
+      <div class="product-features">
+        <h3 class="section-title">Características</h3>
+        <ul>
+          <li>Material: 100% poliéster de secado rápido</li>
+          <li>Disponible en varias tallas: S, M, L, XL</li>
+          <li>Colores: Azul, rojo, negro, verde</li>
+          <li>Incluye camiseta y pantalones cortos</li>
+          <li>Resistente a múltiples lavados sin perder el color</li>
+        </ul>
+      </div>
     </div>
 
     <!--Guia de Tallas-->
     <div class="section__background__color section__background__product"></div>
-    <section class="section__container" id="about">
+    <section class="section__container__uniforms" id="about">
       <div class="about__content">
         <h2 class="section__header2">Guia de Tallas</h2>
       </div>
       <div class="section__container about__container__about">
-        <img src="/assets/tallas.jpg" alt="Guia de Tallas">
+        <img src="/assets/tallas.jpg" alt="Guia de Tallas" />
       </div>
     </section>
+
+    <!-- Productos relacionados centrados -->
+    <div class="section__container__uniforms">
+      <div class="about__content">
+        <h2 class="section__header">Productos Relacionados</h2>
+      </div>
+      
+      <div class="related-products">
+        <!-- Producto relacionado 1 -->
+        <div class="related-product">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Uniforme de Baloncesto"
+          />
+          <p>Uniforme de Baloncesto</p>
+          <p class="product-price">$59.99</p>
+          <button class="view-more-button">Ver más</button>
+        </div>
+
+        <!-- Producto relacionado 2 -->
+        <div class="related-product">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Uniforme de Voleibol"
+          />
+          <p>Uniforme de Voleibol</p>
+          <p class="product-price">$44.99</p>
+          <button class="view-more-button">Ver más</button>
+        </div>
+
+        <!-- Producto relacionado 3 -->
+        <div class="related-product">
+          <img src="https://via.placeholder.com/150" alt="Uniforme de Tenis" />
+          <p>Uniforme de Tenis</p>
+          <p class="product-price">$39.99</p>
+          <button class="view-more-button">Ver más</button>
+        </div>
+
+        <!-- Producto relacionado 4 -->
+        <div class="related-product">
+          <img src="https://via.placeholder.com/150" alt="Camiseta Deportiva" />
+          <p>Camiseta Deportiva</p>
+          <p class="product-price">$19.99</p>
+          <button class="view-more-button">Ver más</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer" id="contact">
-        <div class="section__container footer__container">
-          <div class="footer__col">
-            <div class="logo">
-              <a href="/index.html"><img src="/assets/logo.png" alt="logo" /></a>
-            </div>
-            <p class="section__description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-              Nostrum velit facilis optio, magni odit, voluptate numquam 
-              eveniet iusto debitis, architecto quibusdam. Vero ut explicabo 
-              aliquid voluptatibus numquam aut nisi nostrum!.
-            </p>
-            <button class="btn">Cotiza Ahora</button>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo">
+            <a href="/index.html"><img src="/assets/logo.png" alt="logo" /></a>
           </div>
-          <div class="footer__col">
-            <h4>LINKS</h4>
-            <ul class="footer__links">
-              <li><a href="#">Diseños</a></li>
-              <li><a href="#">Ofertas</a></li>
-              <li><a href="#">Asesores</a></li>
-              <li><a href="#">Reseñas y Clientes</a></li>
-              <li><a href="#">Guia de Tallas</a></li>
-            </ul>
-          </div>
-          <div class="footer__col">
-            <h4>SERVICIOS</h4>
-            <ul class="footer__links">
-              <li><a href="#">Afiliacion</a></li>
-              <li><a href="#">Pago</a></li>
-              <li><a href="#">Acerca de</a></li>
-              <li><a href="#">Envios</a></li>
-            </ul>
-          </div>
-          <div class="footer__col">
-            <h4>CONTACT US</h4>
-            <ul class="footer__links">
-              <li><a href="#">dzr@info.com</a></li>
-            </ul>
-            <div class="footer__socials">
-              <a href="#"><img src="/assets/facebook.png" alt="facebook" /></a>
-              <a href="#"><img src="/assets/instagram.png" alt="instagram" /></a>
-              <a href="#"><img src="/assets/youtube.png" alt="youtube" /></a>
-              <a href="#"><img src="/assets/twitter.png" alt="twitter" /></a>
-            </div>
+          <p class="section__description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            velit facilis optio, magni odit, voluptate numquam eveniet iusto
+            debitis, architecto quibusdam. Vero ut explicabo aliquid
+            voluptatibus numquam aut nisi nostrum!.
+          </p>
+          <button class="btn">Cotiza Ahora</button>
+        </div>
+        <div class="footer__col">
+          <h4>LINKS</h4>
+          <ul class="footer__links">
+            <li><a href="#">Diseños</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Asesores</a></li>
+            <li><a href="#">Reseñas y Clientes</a></li>
+            <li><a href="#">Guia de Tallas</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>SERVICIOS</h4>
+          <ul class="footer__links">
+            <li><a href="#">Afiliacion</a></li>
+            <li><a href="#">Pago</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Envios</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT US</h4>
+          <ul class="footer__links">
+            <li><a href="#">dzr@info.com</a></li>
+          </ul>
+          <div class="footer__socials">
+            <a href="#"><img src="/assets/facebook.png" alt="facebook" /></a>
+            <a href="#"><img src="/assets/instagram.png" alt="instagram" /></a>
+            <a href="#"><img src="/assets/youtube.png" alt="youtube" /></a>
+            <a href="#"><img src="/assets/twitter.png" alt="twitter" /></a>
           </div>
         </div>
-        <div class="footer__bar">
-          Copyright © 2024 Web Design DZR. All rights reserved.
-        </div>
-      </footer>
-  
-      <script src="https://unpkg.com/scrollreveal"></script>
-      <script src="/main.js"></script>
-    </body>
-  </html>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Web Design DZR. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
