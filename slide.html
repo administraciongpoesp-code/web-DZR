@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Imágenes</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Contenedor del slider */
+        .slider-container {
+            position: relative;
+            width: 1200px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos de las imágenes */
+        .slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide 10s infinite;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: opacity 1s ease;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+
+        /* Animación */
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            20% { transform: translateX(-100%); }
+            40% { transform: translateX(-200%); }
+            60% { transform: translateX(-300%); }
+            80% { transform: translateX(-400%); }
+            100% { transform: translateX(0%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="logo_alacranes.png" alt="Alacranes de Durango"></div>
+            <div class="slide"><img src="logo_leñadores.png" alt="Leñadores de Durango"></div>
+            <div class="slide"><img src="logo_alacranes.png" alt="Imagen 3"></div>
+            <div class="slide"><img src="logo_leñadores.png" alt="Imagen 4"></div>
+            <div class="slide"><img src="logo_alacranes.png" alt="Imagen 5"></div>
+        </div>
+    </div>
+</body>
+</html>
