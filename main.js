@@ -2,6 +2,14 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
+// Código para mostrar y ocultar las respuestas con animación
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      answer.classList.toggle('open');
+  });
+});
+
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 
