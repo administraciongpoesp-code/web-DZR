@@ -202,7 +202,7 @@ body {
 
 /*Header Uniformes*/
 .header__uniformes {
-  background-image: url("/assets/equipo_volei.jpg");
+  background-image: url("/assets/headerUniformes.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -212,16 +212,16 @@ body {
 /*Header Servicios*/
 
 .header__servicios {
-  background-image: url("assets/service.jpg");
+  background-image: url("assets/headerServicios.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 100vh;
 }
 
-/*Header Uniformes*/
+/*Header Nosotros*/
 .header__nosotros {
-  background-image: url("/assets/equipo_basquet.jpg");
+  background-image: url("/assets/headerNosotros.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -324,9 +324,9 @@ nav {
 }
 
 .header__container h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 500;
-  line-height: 4.5rem;
+  line-height: 6rem;
   color: var(--white);
   text-align: center;
 }
