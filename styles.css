@@ -202,7 +202,7 @@ body {
 
 /*Header Uniformes*/
 .header__uniformes {
-  background-image: url("/assets/headerUniformes.jpg");
+  background-image: url("/assets/headerUniformes.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@ body {
 /*Header Servicios*/
 
 .header__servicios {
-  background-image: url("assets/headerServicios.jpg");
+  background-image: url("assets/headerServicios.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -221,7 +221,7 @@ body {
 
 /*Header Nosotros*/
 .header__nosotros {
-  background-image: url("/assets/headerNosotros.jpg");
+  background-image: url("/assets/headerNosotros.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
