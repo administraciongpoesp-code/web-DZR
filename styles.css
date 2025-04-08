@@ -202,7 +202,7 @@ body {
 
 /*Header Uniformes*/
 .header__uniformes {
-  background-image: url("/assets/headerUniformes.png");
+  background-image: url("/assets/headerUniformes.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@ body {
 /*Header Servicios*/
 
 .header__servicios {
-  background-image: url("assets/headerServicios.png");
+  background-image: url("assets/headerServicios.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -221,7 +221,7 @@ body {
 
 /*Header Nosotros*/
 .header__nosotros {
-  background-image: url("/assets/headerNosotros.png");
+  background-image: url("/assets/headerNosotros.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -552,7 +552,7 @@ nav {
 }
 
 .service {
-  background-image: url("assets/service.jpg");
+  background-image: url("assets/service.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -766,7 +766,7 @@ nav {
     minmax(1rem, 1fr)
     minmax(0, var(--max-width))
     minmax(1rem, 1fr);
-  background-image: url("assets/explore.jpg");
+  background-image: url("assets/explore.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
