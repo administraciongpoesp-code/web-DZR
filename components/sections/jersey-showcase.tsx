@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { Layers, ShieldCheck, Wind } from "lucide-react";
 
 import { SectionHeading } from "@/components/section-heading";
@@ -11,8 +12,8 @@ import { FABRIC, SPONSORED_TEAMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const VIEWS = [
-  { id: "frontal", label: "Vista frontal" },
-  { id: "posterior", label: "Vista posterior" },
+  { id: "frontal", label: "Vista frontal", src: "/images/uniformes/vista-frontal.webp" },
+  { id: "posterior", label: "Vista posterior", src: null },
 ] as const;
 
 export function JerseyShowcase() {
@@ -55,10 +56,26 @@ export function JerseyShowcase() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                 >
-                  <PlaceholderMedia
-                    label={`Jersey Alacranes de Durango — ${VIEWS.find((v) => v.id === view)?.label}`}
-                    tone="dark"
-                  />
+                  {(() => {
+                    const currentView = VIEWS.find((v) => v.id === view)!;
+                    return currentView.src ? (
+                      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-dezara-black">
+                        <Image
+                          src={currentView.src}
+                          alt={`Jersey oficial de ${SPONSORED_TEAMS.primary.name}, ${currentView.label.toLowerCase()}, fabricado por Dezara`}
+                          fill
+                          sizes="(min-width: 1024px) 50vw, 100vw"
+                          className="object-cover"
+                          priority={currentView.id === "frontal"}
+                        />
+                      </div>
+                    ) : (
+                      <PlaceholderMedia
+                        label={`Jersey Alacranes de Durango — ${currentView.label}`}
+                        tone="dark"
+                      />
+                    );
+                  })()}
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -209,54 +209,6 @@ export const CLIENTS = [
   "Grupo Peñoles",
 ] as const;
 
-// Fotografía real de producto Dezara (material de marketing propio,
-// recuperado del sitio anterior dzr.com.mx). No incluye el jersey de
-// Alacranes de Durango — ver PlaceholderMedia en Jersey Showcase.
-export const GALLERY_ITEMS = [
-  {
-    slug: "futbol",
-    title: "Fútbol",
-    caption: "Conjunto personalizado de fútbol",
-    image: "/images/uniformes/futbol-conjunto.webp",
-    alt: "Conjunto de fútbol personalizado fabricado por Dezara, playera y short en tonos vino y celeste",
-  },
-  {
-    slug: "basquetbol",
-    title: "Básquetbol",
-    caption: 'Conjunto "Cienega Grande"',
-    image: "/images/uniformes/basquet-cienega-grande.webp",
-    alt: "Jersey de básquetbol negro y rojo fabricado por Dezara para el equipo Cienega Grande",
-  },
-  {
-    slug: "beisbol",
-    title: "Béisbol",
-    caption: 'Jersey "Aguilera"',
-    image: "/images/uniformes/beisbol-aguilera.webp",
-    alt: "Jersey de béisbol blanco y verde fabricado por Dezara para el equipo Aguilera",
-  },
-  {
-    slug: "voleibol",
-    title: "Voleibol",
-    caption: "Conjunto personalizado de voleibol",
-    image: "/images/uniformes/voleibol-conjunto.webp",
-    alt: "Conjunto de voleibol rojo, blanco y negro fabricado por Dezara",
-  },
-  {
-    slug: "equipo-basquetbol",
-    title: "Los Borbotones",
-    caption: "Equipo real vestido por Dezara",
-    image: "/images/uniformes/equipo-basquet-borbotones.webp",
-    alt: "Equipo de básquetbol amateur Los Borbotones posando con su uniforme fabricado por Dezara",
-  },
-  {
-    slug: "equipo-voleibol",
-    title: "Las Lobas · Chelitas",
-    caption: "Equipo real vestido por Dezara",
-    image: "/images/uniformes/equipo-voleibol-chelitas.webp",
-    alt: "Equipo de voleibol amateur Las Lobas Chelitas posando con su uniforme fabricado por Dezara",
-  },
-] as const;
-
 export const UNIFORM_TYPE_OPTIONS = [
   { value: "deportivo", label: "Deportivo" },
   { value: "industrial", label: "Industrial / seguridad" },
