@@ -8,14 +8,19 @@
 # production
 /build
 
-# env
-.env
-.env*.local
+# env — ignora cualquier variante (.env, .env.local, .env.production,
+# .env.development, .env.test, etc.), excepto la plantilla de ejemplo
+.env*
+!.env.example
 
 # misc
 .DS_Store
 *.pem
 npm-debug.log*
+
+# material de referencia interno del negocio (no es código ni asset del
+# sitio) — no debe vivir en el control de versiones
+DEZARA-Brochure 2024.pdf.pdf
 
 # typescript
 *.tsbuildinfo
