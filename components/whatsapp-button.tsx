@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 interface WhatsAppButtonProps extends Pick<ButtonProps, "variant" | "size" | "className"> {
   message?: keyof typeof WHATSAPP_MESSAGES;
   label?: string;
+  /** Número en formato E.164 sin "+" (ej. "526188129511"). Por defecto, el de DZR. */
+  phoneNumber?: string;
 }
 
 export function WhatsAppButton({
@@ -18,10 +20,11 @@ export function WhatsAppButton({
   variant = "whatsapp",
   size = "default",
   className,
+  phoneNumber,
 }: WhatsAppButtonProps) {
   return (
     <a
-      href={buildWhatsAppLink(WHATSAPP_MESSAGES[message])}
+      href={buildWhatsAppLink(WHATSAPP_MESSAGES[message], phoneNumber)}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(buttonVariants({ variant, size }), className)}

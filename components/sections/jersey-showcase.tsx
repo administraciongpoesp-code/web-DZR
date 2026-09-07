@@ -11,13 +11,15 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { FABRIC, SPONSORED_TEAMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-const VIEWS = [
+type JerseyView = { id: "frontal" | "posterior"; label: string; src: string };
+
+const VIEWS: readonly JerseyView[] = [
   { id: "frontal", label: "Vista frontal", src: "/images/uniformes/vista-frontal.webp" },
-  { id: "posterior", label: "Vista posterior", src: null },
-] as const;
+  { id: "posterior", label: "Vista posterior", src: "/images/uniformes/vista-posterior.webp" },
+];
 
 export function JerseyShowcase() {
-  const [view, setView] = useState<(typeof VIEWS)[number]["id"]>("frontal");
+  const [view, setView] = useState<JerseyView["id"]>("frontal");
 
   return (
     <section id="jersey-showcase" className="bg-dezara-black py-24 text-white sm:py-32">
@@ -25,7 +27,7 @@ export function JerseyShowcase() {
         <SectionHeading
           eyebrow="Lanzamiento oficial"
           title="El nuevo uniforme de Alacranes de Durango"
-          description="El jersey oficial fabricado por Dezara para Alacranes de Durango, equipo de la Liga de Expansión MX. Diseño, confección y control de calidad, de principio a fin."
+          description="El jersey oficial fabricado por DZR para Alacranes de Durango, equipo de la Liga de Expansión MX. Diseño, confección y control de calidad, de principio a fin."
           tone="light"
         />
 
@@ -62,7 +64,7 @@ export function JerseyShowcase() {
                       <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-dezara-black">
                         <Image
                           src={currentView.src}
-                          alt={`Jersey oficial de ${SPONSORED_TEAMS.primary.name}, ${currentView.label.toLowerCase()}, fabricado por Dezara`}
+                          alt={`Jersey oficial de ${SPONSORED_TEAMS.primary.name}, ${currentView.label.toLowerCase()}, fabricado por DZR`}
                           fill
                           sizes="(min-width: 1024px) 50vw, 100vw"
                           className="object-cover"
@@ -85,7 +87,7 @@ export function JerseyShowcase() {
             <div>
               <h3 className="mb-3 text-xl font-bold uppercase tracking-wide text-white">Detalles del kit</h3>
               <p className="text-white/70">
-                El uniforme completo de fútbol de Dezara incluye playera, short y medias.{" "}
+                El uniforme completo de fútbol de DZR incluye playera, short y medias.{" "}
                 <span className="text-white/40">
                   [Verificar con el cliente si el kit oficial de Alacranes conserva exactamente esta misma
                   composición.]
@@ -111,7 +113,7 @@ export function JerseyShowcase() {
               <li className="flex items-start gap-3">
                 <Layers className="mt-0.5 h-5 w-5 shrink-0 text-dezara-red" aria-hidden />
                 Costuras y acabados de confección propia, bajo el mismo control de calidad de todas las líneas
-                Dezara.
+                DZR.
               </li>
             </ul>
 

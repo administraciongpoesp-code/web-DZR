@@ -10,7 +10,7 @@ export const contactFormSchema = z.object({
     .min(10, "Ingresa un teléfono a 10 dígitos.")
     .max(20)
     .regex(/^[0-9+()\s-]+$/, "Ingresa solo números y símbolos telefónicos."),
-  uniformType: z.enum(["deportivo", "industrial", "medico", "corporativo"], {
+  uniformType: z.enum(["futbol", "basquetbol", "rutas", "carreras", "conjunto-deportivo", "otro"], {
     message: "Selecciona el tipo de uniforme.",
   }),
   quantity: z.string().trim().max(50).optional().or(z.literal("")),

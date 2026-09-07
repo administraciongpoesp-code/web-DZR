@@ -49,7 +49,7 @@ export function Hero() {
           </div>
           <div className="h-8 w-px bg-white/20" aria-hidden />
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/70">
-            Patrocinador oficial de
+            Proveedor oficial de
             <br />
             <span className="text-sm text-white">{SPONSORED_TEAMS.primary.name}</span>
           </p>
@@ -72,7 +72,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 max-w-xl text-balance text-base text-white/70 sm:text-lg"
         >
-          Dezara, fábrica de uniformes de Durango, viste al equipo de fútbol
+          DZR, fábrica de uniformes de Durango, viste al equipo de fútbol
           profesional Alacranes de Durango — {SPONSORED_TEAMS.primary.league}.
         </motion.p>
 

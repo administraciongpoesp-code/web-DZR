@@ -14,13 +14,18 @@ interface CTAButtonProps {
 
 export function CTAButton({ href, children, variant = "primary", size = "default", className }: CTAButtonProps) {
   const isExternal = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
+  // Ancla dentro de la misma página (ej. "#jersey-showcase"): se usa un <a>
+  // nativo en vez de <Link>, que solo hace scroll-to-hash cuando la URL
+  // cambia. Con <Link>, si ya se navegó una vez a ese hash, un segundo click
+  // no vuelve a hacer scroll porque la URL no cambia.
+  const isHashLink = href.startsWith("#");
 
-  if (isExternal) {
+  if (isExternal || isHashLink) {
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
         className={cn(buttonVariants({ variant, size }), className)}
       >
         {children}

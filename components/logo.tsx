@@ -1,28 +1,35 @@
-import { Zap } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
-  tone?: "dark" | "light";
   showSlogan?: boolean;
 }
 
+// Relación de aspecto real del archivo oficial (3642x1370).
+const LOGO_ASPECT_RATIO = 3642 / 1370;
+
 /**
- * Wordmark de Dezara recreado en código (no hay vector disponible del logo
- * oficial). Reproduce fielmente el lockup del brochure: "DE" + rayo rojo +
- * "ZARA", con el slogan oficial debajo.
+ * Wordmark oficial de DZR, logo-dzr-red.png — versión en rojo de
+ * marca (misma silueta que logo-dzr.png, recoloreada a partir de su canal
+ * alfa) para que destaque tanto sobre fondos oscuros (Navbar/Footer) como
+ * claros (sponsorship-section).
  */
-export function Logo({ className, tone = "dark", showSlogan = false }: LogoProps) {
-  const textColor = tone === "dark" ? "text-dezara-ink" : "text-white";
+export function Logo({ className, showSlogan = false }: LogoProps) {
   return (
     <span className={cn("inline-flex flex-col leading-none select-none", className)}>
-      <span className={cn("inline-flex items-center font-display text-2xl italic", textColor)}>
-        DE
-        <Zap className="h-6 w-5 -mx-0.5 fill-dezara-red text-dezara-red" strokeWidth={1} />
-        ZARA
+      <span className="relative h-8 sm:h-9" style={{ aspectRatio: LOGO_ASPECT_RATIO }}>
+        <Image
+          src="/images/placeholders/logo-dzr-red.png"
+          alt="DZR"
+          fill
+          priority
+          sizes="200px"
+          className="object-contain object-left"
+        />
       </span>
       {showSlogan ? (
-        <span className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-dezara-red">
+        <span className="mt-1.5 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-dezara-red">
           Vestimos tu pasión
         </span>
       ) : null}

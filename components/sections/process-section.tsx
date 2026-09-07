@@ -30,7 +30,7 @@ export function ProcessSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <Icon className="h-8 w-8 text-dezara-red" aria-hidden />
-                <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-dezara-ink">{step.title}</h3>
+                <h3 className="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-dezara-ink">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-dezara-mist">{step.description}</p>
               </motion.div>
             );

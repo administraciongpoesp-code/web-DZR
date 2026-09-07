@@ -1,10 +1,19 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Dezara — Vestimos tu pasión";
+export const alt = "DZR — Vestimos tu pasión";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+// Relación de aspecto real del logo oficial (3642x1370).
+const LOGO_WIDTH = 560;
+const LOGO_HEIGHT = Math.round((LOGO_WIDTH * 1370) / 3642);
+
 export default async function OpengraphImage() {
+  const logoFile = await readFile(join(process.cwd(), "public/images/placeholders/logo-dzr-red.png"));
+  const logoSrc = `data:image/png;base64,${logoFile.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -20,16 +29,13 @@ export default async function OpengraphImage() {
             "linear-gradient(135deg, #0b0b0c 0%, #0b0b0c 60%, #1a1a1c 100%)",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", fontSize: 120, fontWeight: 700, color: "#ffffff" }}>
-          DE
-          <span style={{ color: "#e5292e" }}>/</span>
-          ZARA
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- next/og requires a plain <img>, not next/image */}
+        <img src={logoSrc} width={LOGO_WIDTH} height={LOGO_HEIGHT} alt="" />
         <div
           style={{
             marginTop: 24,
             fontSize: 36,
-            color: "#e5292e",
+            color: "#c8102e",
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: 6,

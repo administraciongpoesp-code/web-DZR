@@ -5,10 +5,12 @@ import { contactFormSchema } from "@/lib/schemas/contact";
 import { CONTACT } from "@/lib/constants";
 
 const UNIFORM_TYPE_LABELS: Record<string, string> = {
-  deportivo: "Deportivo",
-  industrial: "Industrial / seguridad",
-  medico: "Médico / hospitalario",
-  corporativo: "Corporativo / ejecutivo / escolar",
+  futbol: "Fútbol",
+  basquetbol: "Básquetbol",
+  rutas: "Rutas",
+  carreras: "Carreras",
+  "conjunto-deportivo": "Conjunto deportivo",
+  otro: "Otro",
 };
 
 export async function POST(request: Request) {
@@ -44,7 +46,7 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
-      from: "Dezara Web <onboarding@resend.dev>",
+      from: "DZR Web <onboarding@resend.dev>",
       to: contactEmail,
       replyTo: data.email,
       subject: `Nueva cotización — ${data.name}${data.company ? ` (${data.company})` : ""}`,

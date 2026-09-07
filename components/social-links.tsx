@@ -19,7 +19,7 @@ export function SocialLinks({ className, tone = "light" }: SocialLinksProps) {
         href={SOCIAL.facebook.url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Facebook de Dezara: ${SOCIAL.facebook.label}`}
+        aria-label={`Facebook de DZR: ${SOCIAL.facebook.label}`}
         className={cn("flex h-11 w-11 items-center justify-center rounded-full border transition-colors", base)}
       >
         <FacebookIcon className="h-5 w-5" />
@@ -28,7 +28,7 @@ export function SocialLinks({ className, tone = "light" }: SocialLinksProps) {
         href={SOCIAL.instagram.url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Instagram de Dezara: ${SOCIAL.instagram.label}`}
+        aria-label={`Instagram de DZR: ${SOCIAL.instagram.label}`}
         className={cn("flex h-11 w-11 items-center justify-center rounded-full border transition-colors", base)}
       >
         <InstagramIcon className="h-5 w-5" />

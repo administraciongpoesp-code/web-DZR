@@ -11,13 +11,13 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Uniformes",
   description:
-    "Uniformes deportivos, industriales, médicos y corporativos fabricados por Dezara en Durango. Diseño, confección y control de calidad a la medida de cada cliente.",
+    "Uniformes deportivos, industriales, médicos y corporativos fabricados por DZR en Durango. Diseño, confección y control de calidad a la medida de cada cliente.",
 };
 
 export default function UniformesPage() {
   return (
     <div className="bg-white">
-      <section className="border-b border-dezara-mist/15 bg-dezara-black py-20 text-white sm:py-28">
+      <section className="border-b border-dezara-mist/15 bg-dezara-black pb-20 pt-32 text-white sm:pb-28 sm:pt-40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Catálogo"

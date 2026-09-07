@@ -10,7 +10,7 @@ import { CONTACT, SOCIAL, buildWhatsAppLink, WHATSAPP_MESSAGES } from "@/lib/con
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Cotiza tu uniforme con Dezara: WhatsApp, correo, formulario de contacto y ubicación en Durango, México.",
+    "Cotiza tu uniforme con DZR: WhatsApp, correo, formulario de contacto y ubicación en Durango, México.",
 };
 
 const mapQuery = encodeURIComponent(
@@ -20,7 +20,7 @@ const mapQuery = encodeURIComponent(
 export default function ContactoPage() {
   return (
     <div className="bg-white">
-      <section className="border-b border-dezara-mist/15 bg-dezara-black py-20 text-white sm:py-28">
+      <section className="border-b border-dezara-mist/15 bg-dezara-black pb-20 pt-32 text-white sm:pb-28 sm:pt-40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Contacto"
@@ -103,7 +103,7 @@ export default function ContactoPage() {
 
             <div className="overflow-hidden rounded-xl border border-dezara-mist/15">
               <iframe
-                title="Ubicación de Dezara en Durango, México"
+                title="Ubicación de DZR en Durango, México"
                 src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
                 width="100%"
                 height="320"

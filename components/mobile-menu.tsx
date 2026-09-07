@@ -24,7 +24,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="overflow-hidden border-t border-white/10 bg-dezara-black md:hidden"
+          className="overflow-hidden border-t border-white/10 bg-dezara-black lg:hidden"
         >
           <nav className="flex flex-col gap-1 px-6 py-6" aria-label="Navegación móvil">
             {NAV_LINKS.map((link) => (

@@ -1,21 +1,21 @@
 /**
- * Fuente única de verdad de datos de negocio para el sitio Dezara.
+ * Fuente única de verdad de datos de negocio para el sitio DZR.
  * Todo el contenido aquí proviene del brochure oficial "DEZARA 2024" y de
- * dzr.com.mx. No modificar con datos no verificados — ver CLAUDE.md.
+ * dzr.com.mx. No modificar con datos no verificados —
  */
 
 export const SITE = {
-  name: "Dezara",
+  name: "DZR",
   slogan: "Vestimos tu pasión.",
   url: "https://www.dzr.com.mx",
   description:
-    "Dezara es una empresa duranguense encargada del diseño, fabricación y elaboración de prendas personalizadas, con alianzas comerciales de prestigio nacional e internacional.",
+    "DZR es una empresa duranguense encargada del diseño, fabricación y elaboración de prendas personalizadas, con alianzas comerciales de prestigio nacional e internacional.",
 } as const;
 
 export const CONTACT = {
   whatsappDisplay: "618 140 26 35",
   whatsappNumber: "526181402635", // E.164: 52 (México) + 6181402635, sin "1" (regla retirada en 2021)
-  email: "dezara.admon@outlook.com",
+  email: "dzr.admon@outlook.com",
   addressPrimary: {
     line1: "Calle Olmos #126, Fracc. Industrial Nuevo Durango",
     line2: "C.P. 34127, Durango, Dgo.",
@@ -30,39 +30,68 @@ export const CONTACT = {
 
 export const SOCIAL = {
   facebook: {
-    label: "Dezara",
+    label: "DZR",
     url: "https://www.facebook.com/DZRSPORT",
   },
   instagram: {
-    label: "@dezara_sport",
-    url: "https://www.instagram.com/dezara_sport",
+    label: "@dzr_sport",
+    url: "https://www.instagram.com/dzr_sport",
   },
 } as const;
 
-export function buildWhatsAppLink(message: string) {
+export function buildWhatsAppLink(message: string, phoneNumber: string = CONTACT.whatsappNumber) {
   const params = new URLSearchParams({ text: message });
-  return `https://wa.me/${CONTACT.whatsappNumber}?${params.toString()}`;
+  return `https://wa.me/${phoneNumber}?${params.toString()}`;
 }
 
 export const WHATSAPP_MESSAGES = {
   general: "Hola, quiero cotizar un uniforme.",
   jersey: "Hola, quiero más información sobre el jersey de Alacranes de Durango.",
   uniformes: "Hola, quiero cotizar uniformes para mi equipo o empresa.",
+  showroom: "Hola, quiero coordinar un punto de entrega o recolección de mi pedido.",
 } as const;
 
 export const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Uniformes", href: "/uniformes" },
   { label: "Servicios", href: "/servicios" },
+  { label: "Showrooms", href: "/showrooms" },
   { label: "Contacto", href: "/contacto" },
 ] as const;
 
-// Cifras del sitio web anterior de Dezara — no confirmadas en el brochure 2024.
+// Puntos físicos de entrega/recolección/levantamiento de pedido dentro de
+// Durango. No agregar puntos adicionales sin dirección real confirmada por
+// el cliente (regla del proyecto: no inventar direcciones).
+export const SHOWROOMS = [
+  {
+    slug: "planta-nuevo-durango",
+    name: "Planta y showroom Nuevo Durango",
+    address: CONTACT.addressPrimary,
+    services: ["Entrega", "Recolección", "Levantamiento de pedido"],
+    phone: null as string | null,
+  },
+  {
+    slug: "deportes-espana-cienega",
+    name: "Deportes España — Col. Ciénega",
+    // Dirección verificada en directorios públicos (Waze, Ubico.me,
+    // LatinoPlaces, PlanetaMexico): C. Isauro Venzor #908 Ote, Col. Ciénega,
+    // C.P. 34090, Durango, Dgo.
+    address: {
+      line1: "C. Isauro Venzor #908 Ote, Col. Ciénega",
+      line2: "C.P. 34090, Durango, Dgo.",
+    },
+    services: ["Entrega", "Recolección", "Levantamiento de pedido"],
+    // Confirmado directamente por el cliente.
+    phone: "618 812 9511" as string | null,
+  },
+] as const;
+
+// Cifras del sitio web anterior de DZR — no confirmadas en el brochure 2024.
 // Mostrar siempre junto a su etiqueta de verificación (ver StatsBar).
 export const UNVERIFIED_STATS = [
-  { value: "+10", label: "años de experiencia", verified: false },
-  { value: "+1,000", label: "equipos vestidos", verified: false },
-  { value: "+12,000", label: "uniformes realizados", verified: false },
+  { value: "+14", label: "años de experiencia", verified: true },
+  { value: "+5,000", label: "equipos vestidos", verified: true },
+  { value: "+25,000", label: "uniformes realizados", verified: true },
 ] as const;
 
 export const SPONSORED_TEAMS = {
@@ -90,7 +119,7 @@ export const FABRIC = {
   name: "AERO-DRY",
   composition: "100% Poliéster",
   description:
-    "Tejido transpirable y ligero, pensado para rendimiento deportivo — la base real documentada en el material fotográfico de Dezara para las playeras deportivas.",
+    "Tejido transpirable y ligero, pensado para rendimiento deportivo — la base real documentada en el material fotográfico de DZR para las playeras deportivas.",
 } as const;
 
 export const PROCESS_STEPS = [
@@ -124,7 +153,7 @@ export const PRODUCT_LINES = [
       "Fútbol, básquetbol, voleibol y béisbol. Confección y diseño textil, sublimación de alta calidad, DTF, playeras para rutas y carreras, morrales y buffs.",
     items: ["Fútbol", "Básquetbol", "Voleibol", "Béisbol", "Playeras para carreras", "Morrales y buffs"],
     image: "/images/uniformes/futbol-conjunto.webp",
-    imageAlt: "Conjunto de fútbol personalizado fabricado por Dezara",
+    imageAlt: "Conjunto de fútbol personalizado fabricado por DZR",
   },
   {
     slug: "industriales",
@@ -168,8 +197,31 @@ export const PRODUCT_LINES = [
       "Asesoría de diseño y confección para uniformes corporativos, ejecutivos, de seguridad, protección civil y escolares.",
     items: ["Uniformes corporativos", "Uniformes ejecutivos", "Seguridad y protección civil", "Uniformes escolares"],
     image: "/images/uniformes/polo-corporativo.webp",
-    imageAlt: "Playera tipo polo corporativa fabricada por Dezara",
+    imageAlt: "Playera tipo polo corporativa fabricada por DZR",
   },
+] as const;
+
+// Productos de la línea deportiva mostrados en Servicios ("Nuestros productos").
+// Las categorías provienen del catálogo real (línea Deportivos del brochure);
+// solo "futbol" tiene fotografía propia disponible por ahora (el kit de
+// Alacranes de Durango) — el resto queda con `images: []` y se muestra con
+// PlaceholderMedia hasta recibir fotos reales de cada línea.
+export const OUR_PRODUCTS = [
+  {
+    slug: "futbol",
+    title: "Fútbol",
+    images: [
+      { src: "/images/uniformes/uniforme-completo.webp", alt: "Uniforme de fútbol fabricado por DZR, conjunto completo" },
+      { src: "/images/uniformes/vista-frontal.webp", alt: "Uniforme de fútbol fabricado por DZR, vista frontal" },
+      { src: "/images/uniformes/vista-posterior.webp", alt: "Uniforme de fútbol fabricado por DZR, vista posterior" },
+      { src: "/images/uniformes/en-cancha.webp", alt: "Uniforme de fútbol fabricado por DZR en cancha" },
+      { src: "/images/uniformes/detalle-tela.webp", alt: "Detalle de la tela del uniforme de fútbol fabricado por DZR" },
+    ],
+  },
+  { slug: "basquetbol", title: "Básquetbol", images: [] },
+  { slug: "rutas", title: "Rutas", images: [] },
+  { slug: "carreras", title: "Carreras", images: [] },
+  { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
 ] as const;
 
 // Telas documentadas en el brochure — exclusivas de la línea médica/hospitalaria.
@@ -209,9 +261,23 @@ export const CLIENTS = [
   "Grupo Peñoles",
 ] as const;
 
+// Equipos + clientes institucionales para el slider de logos de "Nosotros"
+// (Inicio). Solo Alacranes y Leñadores tienen archivo de logo real
+// disponible por ahora — el resto queda con `logo: null` y se muestra con
+// el nombre en texto hasta recibir su logo oficial (no usar logos que no
+// sean los reales/autorizados por cada cliente).
+export const TRUSTED_LOGOS: { name: string; logo: string | null }[] = [
+  { name: "Alacranes de Durango", logo: "/images/teams/alacranes-durango.webp" },
+  { name: "Leñadores de Durango", logo: "/images/teams/lenadores-durango.webp" },
+  { name: "Generales de Durango", logo: null },
+  ...CLIENTS.map((name) => ({ name, logo: null as string | null })),
+];
+
 export const UNIFORM_TYPE_OPTIONS = [
-  { value: "deportivo", label: "Deportivo" },
-  { value: "industrial", label: "Industrial / seguridad" },
-  { value: "medico", label: "Médico / hospitalario" },
-  { value: "corporativo", label: "Corporativo / ejecutivo / escolar" },
+  { value: "futbol", label: "Fútbol" },
+  { value: "basquetbol", label: "Básquetbol" },
+  { value: "rutas", label: "Rutas" },
+  { value: "carreras", label: "Carreras" },
+  { value: "conjunto-deportivo", label: "Conjunto deportivo" },
+  { value: "otro", label: "Otro" },
 ] as const;

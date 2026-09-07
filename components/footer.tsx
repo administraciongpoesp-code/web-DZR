@@ -13,13 +13,13 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Logo tone="light" showSlogan />
+            <Logo showSlogan />
             <p className="mt-4 max-w-sm text-sm leading-relaxed">{SITE.description}</p>
             <SocialLinks className="mt-6" tone="light" />
           </div>
 
           <div>
-            <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white">Navegación</h3>
+            <h3 className="mb-4 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white">Navegación</h3>
             <ul className="space-y-2 text-sm">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -32,7 +32,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white">Contacto</h3>
+            <h3 className="mb-4 font-sans text-sm font-bold uppercase tracking-[0.08em] text-white">Contacto</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-dezara-red" aria-hidden />
@@ -57,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Dezara. Todos los derechos reservados.</p>
+          <p>© {year} DZR. Todos los derechos reservados.</p>
           <p>{SITE.slogan}</p>
         </div>
       </div>

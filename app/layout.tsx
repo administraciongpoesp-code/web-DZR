@@ -24,13 +24,13 @@ const anton = Anton({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Dezara — Vestimos tu pasión | Fábrica de uniformes en Durango",
-    template: "%s | Dezara",
+    default: "DZR — Vestimos tu pasión | Fábrica de uniformes en Durango",
+    template: "%s | DZR",
   },
   description:
-    "Dezara es la fábrica de uniformes de Durango, patrocinador oficial de Alacranes de Durango. Uniformes deportivos, industriales, médicos y corporativos con diseño y confección a la medida.",
+    "DZR es la fábrica de uniformes de Durango, patrocinador oficial de Alacranes de Durango. Uniformes deportivos, industriales, médicos y corporativos con diseño y confección a la medida.",
   keywords: [
-    "Dezara",
+    "DZR",
     "uniformes Durango",
     "Alacranes de Durango",
     "fábrica de uniformes",
@@ -38,19 +38,19 @@ export const metadata: Metadata = {
     "uniformes industriales",
     "uniformes médicos",
   ],
-  authors: [{ name: "Dezara" }],
+  authors: [{ name: "DZR" }],
   openGraph: {
     type: "website",
     locale: "es_MX",
     url: SITE.url,
-    siteName: "Dezara",
-    title: "Dezara — Vestimos tu pasión",
+    siteName: "DZR",
+    title: "DZR — Vestimos tu pasión",
     description:
       "Fábrica de uniformes en Durango y patrocinador oficial de Alacranes de Durango. Deportivos, industriales, médicos y corporativos.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dezara — Vestimos tu pasión",
+    title: "DZR — Vestimos tu pasión",
     description: "Fábrica de uniformes en Durango y patrocinador oficial de Alacranes de Durango.",
   },
 };
