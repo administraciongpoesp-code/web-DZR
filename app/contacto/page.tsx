@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -31,8 +32,10 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        <RayPattern id="contacto-pattern" />
+
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h2 className="mb-6 text-xl font-bold uppercase tracking-wide text-dezara-ink">Formulario</h2>
             <ContactForm />

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { SITE, TRUSTED_LOGOS, UNVERIFIED_STATS } from "@/lib/constants";
 
@@ -13,8 +14,10 @@ const LOGO_TRACK = [...TRUSTED_LOGOS, ...TRUSTED_LOGOS];
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="overflow-hidden bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="nosotros" className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <RayPattern id="about-pattern" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Nosotros" title="La fábrica detrás de cada prenda" description={SITE.description} />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-3">
@@ -53,7 +56,7 @@ export function AboutSection() {
       </div>
 
       <div
-        className="relative [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
+        className="relative z-10 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
         aria-hidden="true"
       >
         <div className="flex w-max animate-marquee items-center gap-10 hover:[animation-play-state:paused] motion-reduce:animate-none">

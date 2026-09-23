@@ -1,13 +1,16 @@
 import Image from "next/image";
 
-import { SectionHeading } from "@/components/section-heading";
 import { Logo } from "@/components/logo";
+import { RayPattern } from "@/components/ray-pattern";
+import { SectionHeading } from "@/components/section-heading";
 import { SPONSORED_TEAMS } from "@/lib/constants";
 
 export function SponsorshipSection() {
   return (
-    <section className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <RayPattern id="sponsorship-pattern" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <SectionHeading
             eyebrow="DZR × Alacranes de Durango"

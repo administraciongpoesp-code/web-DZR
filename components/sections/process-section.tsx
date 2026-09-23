@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ClipboardCheck, PenTool, ShieldCheck, ShirtIcon, Users } from "lucide-react";
 
+import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { PROCESS_STEPS } from "@/lib/constants";
 
@@ -10,8 +11,10 @@ const ICONS = [Users, PenTool, ShirtIcon, ShieldCheck, ClipboardCheck];
 
 export function ProcessSection() {
   return (
-    <section className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <RayPattern id="process-pattern" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Cómo trabajamos" title="Nuestro proceso" />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Check } from "lucide-react";
 
+import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { PlaceholderMedia } from "@/components/placeholder-media";
@@ -33,13 +34,20 @@ export default function UniformesPage() {
         const imageAlt = "imageAlt" in line ? line.imageAlt : undefined;
         const reversed = index % 2 === 1;
 
+        const isWhite = index % 2 === 0;
+
         return (
           <section
             key={line.slug}
             id={line.slug}
-            className={cn("scroll-mt-24 py-20 sm:py-24", index % 2 === 0 ? "bg-white" : "bg-dezara-fog")}
+            className={cn(
+              "relative scroll-mt-24 overflow-hidden py-20 sm:py-24",
+              isWhite ? "bg-white" : "bg-dezara-fog",
+            )}
           >
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            {isWhite ? <RayPattern id={`uniformes-${line.slug}-pattern`} /> : null}
+
+            <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="grid items-center gap-12 lg:grid-cols-2">
                 <div className={cn(reversed && "lg:order-2")}>
                   {image ? (
@@ -71,7 +79,7 @@ export default function UniformesPage() {
                   </ul>
 
                   {line.slug === "medicos" ? (
-                    <div className="mt-8 overflow-x-auto rounded-lg border border-dezara-mist/20">
+                    <div className="mt-8 overflow-x-auto rounded-lg border border-dezara-mist/20 bg-white">
                       <table className="w-full min-w-[320px] text-left text-sm">
                         <caption className="sr-only">Composición de telas para el área de salud</caption>
                         <thead className="bg-dezara-fog text-xs uppercase tracking-wide text-dezara-mist">

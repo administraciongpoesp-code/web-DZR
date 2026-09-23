@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Handshake, Layers, Palette, ShieldCheck, Sparkles } from "lucide-react";
 
+import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { OurProducts } from "@/components/sections/our-products";
@@ -55,8 +56,10 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        <RayPattern id="servicios-grid-pattern" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => (
               <div key={service.title} className="rounded-xl border border-dezara-mist/15 bg-white p-8 shadow-sm">

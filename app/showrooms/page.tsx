@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ClipboardCheck, MapPin, Navigation, PackageCheck, Phone, Truck, type LucideIcon } from "lucide-react";
 
+import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { SHOWROOMS } from "@/lib/constants";
@@ -31,8 +32,10 @@ export default function ShowroomsPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        <RayPattern id="showrooms-pattern" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             {SHOWROOMS.map((showroom) => {
               const mapQuery = encodeURIComponent(`${showroom.address.line1}, ${showroom.address.line2}`);
@@ -41,7 +44,7 @@ export default function ShowroomsPage() {
               return (
                 <div
                   key={showroom.slug}
-                  className="overflow-hidden rounded-xl border border-dezara-mist/15 shadow-sm"
+                  className="overflow-hidden rounded-xl border border-dezara-mist/15 bg-white shadow-sm"
                 >
                   <div className="aspect-[16/9] w-full bg-dezara-fog">
                     <iframe
