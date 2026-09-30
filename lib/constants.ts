@@ -9,7 +9,7 @@ export const SITE = {
   slogan: "Vestimos tu pasión.",
   url: "https://www.dzr.com.mx",
   description:
-    "DZR es una empresa duranguense encargada del diseño, fabricación y elaboración de prendas personalizadas, con alianzas comerciales de prestigio nacional e internacional.",
+    "DZR es una empresa duranguense dedicada al diseño, fabricación y elaboración de prendas deportivas, con alianzas comerciales de prestigio nacional e internacional.",
 } as const;
 
 export const CONTACT = {
@@ -174,7 +174,7 @@ export const PRODUCT_LINES = [
     title: "Rutas",
     description:
       "Playeras para rutas con diseño y confección personalizada, sublimación de alta calidad y DTF según la identidad de tu grupo o evento.",
-    items: ["Playeras para rutas", "Sublimación", "DTF"],
+    items: ["Playeras para rutas", "Sublimación", "DTF", "Buffs", "Morrales"],
     image: "/images/uniformes/categorias/rutas.png",
     imageAlt: "Uniforme de rutas fabricado por DZR",
   },
@@ -191,18 +191,13 @@ export const PRODUCT_LINES = [
     slug: "conjunto-deportivo",
     title: "Conjuntos deportivos",
     description:
-      "Conjuntos deportivos completos con diseño y confección a la medida; incluye complementos como morrales y buffs de la línea deportiva DZR.",
-    items: ["Conjunto completo", "Morrales", "Buffs", "Sublimación", "DTF"],
+      "Conjuntos deportivos de pants y sudaderas personalizados, ideal para grupos de competencia escolar o equipos deportivos amateur.",
+    items: ["Pantalonera", "Sudadera", "Sublimación"],
     // image: "/images/uniformes/categorias/conjuntoDeportivo.jpg",
     // imageAlt: "Conjunto deportivo fabricado por DZR",
   },
 ] as const;
 
-// Productos de la línea deportiva mostrados en Servicios ("Nuestros productos").
-// Las categorías provienen del catálogo real (línea Deportivos del brochure);
-// solo "futbol" tiene fotografía propia disponible por ahora (el kit de
-// Alacranes de Durango) — el resto queda con `images: []` y se muestra con
-// PlaceholderMedia hasta recibir fotos reales de cada línea.
 export const OUR_PRODUCTS = [
   {
     slug: "futbol",
