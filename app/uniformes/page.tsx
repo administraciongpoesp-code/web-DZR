@@ -6,13 +6,13 @@ import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { PlaceholderMedia } from "@/components/placeholder-media";
-import { MEDICAL_FABRICS, PRODUCT_LINES, WHATSAPP_MESSAGES } from "@/lib/constants";
+import { PRODUCT_LINES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Uniformes",
   description:
-    "Uniformes deportivos, industriales, médicos y corporativos fabricados por DZR en Durango. Diseño, confección y control de calidad a la medida de cada cliente.",
+    "Uniformes de fútbol, básquetbol, rutas, carreras y conjuntos deportivos fabricados por DZR en Durango. Diseño, confección y control de calidad a la medida de cada equipo.",
 };
 
 export default function UniformesPage() {
@@ -22,8 +22,8 @@ export default function UniformesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Catálogo"
-            title="Uniformes para cada necesidad"
-            description="Cuatro líneas de producto, un mismo estándar de diseño y confección: deportivos, industriales, médicos y corporativos."
+            title="Uniformes para cada disciplina"
+            description="Cinco categorías deportivas, un mismo estándar de diseño y confección: fútbol, básquetbol, rutas, carreras y conjuntos deportivos."
             tone="light"
           />
         </div>
@@ -77,32 +77,6 @@ export default function UniformesPage() {
                       </li>
                     ))}
                   </ul>
-
-                  {line.slug === "medicos" ? (
-                    <div className="mt-8 overflow-x-auto rounded-lg border border-dezara-mist/20 bg-white">
-                      <table className="w-full min-w-[320px] text-left text-sm">
-                        <caption className="sr-only">Composición de telas para el área de salud</caption>
-                        <thead className="bg-dezara-fog text-xs uppercase tracking-wide text-dezara-mist">
-                          <tr>
-                            <th scope="col" className="px-4 py-3">
-                              Tela
-                            </th>
-                            <th scope="col" className="px-4 py-3">
-                              Composición
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {MEDICAL_FABRICS.map((fabric, i) => (
-                            <tr key={`${fabric.name}-${i}`} className="border-t border-dezara-mist/10">
-                              <td className="px-4 py-3 font-medium text-dezara-ink">{fabric.name}</td>
-                              <td className="px-4 py-3 text-dezara-mist">{fabric.composition}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  ) : null}
 
                   <WhatsAppButton message="uniformes" label="Solicitar cotización" className="mt-8" />
                 </div>

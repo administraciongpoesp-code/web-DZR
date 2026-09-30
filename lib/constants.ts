@@ -145,59 +145,56 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
+/**
+ * Categorías de la página /uniformes (catálogo deportivo).
+ * Imagen principal por categoría (opcional): public/images/uniformes/categorias/{slug}.webp
+ * — si no existe el archivo, la página muestra el placeholder automáticamente.
+ */
 export const PRODUCT_LINES = [
   {
-    slug: "deportivos",
-    title: "Deportivos",
+    slug: "futbol",
+    title: "Fútbol",
     description:
-      "Fútbol, básquetbol, voleibol y béisbol. Confección y diseño textil, sublimación de alta calidad, DTF, playeras para rutas y carreras, morrales y buffs.",
-    items: ["Fútbol", "Básquetbol", "Voleibol", "Béisbol", "Playeras para carreras", "Morrales y buffs"],
-    image: "/images/uniformes/futbol-conjunto.webp",
-    imageAlt: "Conjunto de fútbol personalizado fabricado por DZR",
+      "Confección y diseño textil para equipos de fútbol: sublimación de alta calidad, DTF y uniforme completo para competencia.",
+    items: ["Playera", "Short", "Medias", "Sublimación", "DTF"],
+    image: "/images/uniformes/categorias/futbol.jpg",
+    imageAlt: "Uniforme de fútbol fabricado por DZR",
   },
   {
-    slug: "industriales",
-    title: "Industriales y seguridad",
+    slug: "basquetbol",
+    title: "Básquetbol",
     description:
-      "Uniformes de trabajo y seguridad industrial: camisas, playeras polo, pantalones, chalecos, brigadista, sudaderas, chamarras y calzado de trabajo.",
-    items: [
-      "Camisas y blusas",
-      "Playeras tipo polo",
-      "Gorros y cachucha",
-      "Pantalones",
-      "Chalecos",
-      "Uniforme de brigadista",
-      "Sudaderas y chamarras",
-      "Zapatos y botas de trabajo",
-      "Tennis",
-      "Uniformes de bombero",
-    ],
+      "Uniformes de básquetbol con diseño personalizado, confección textil y acabados pensados para el rendimiento en cancha.",
+    items: ["Jersey", "Short", "Sublimación", "DTF"],
+    // image: "/images/uniformes/categorias/basquetbol.jpg",
+    // imageAlt: "Uniforme de basquetbol fabricado por DZR",
   },
   {
-    slug: "medicos",
-    title: "Médicos y hospitalarios",
+    slug: "rutas",
+    title: "Rutas",
     description:
-      "Línea completa para el sector salud: batas clínicas, ropa de cama hospitalaria, uniformes quirúrgicos y textiles especializados con telas antifluidos.",
-    items: [
-      "Bata clínica",
-      "Bata de paciente",
-      "Bata pediátrica",
-      "Bata asilada",
-      "Cofias",
-      "Sábanas (cajón, campo, celáfica, envolvente, clínica)",
-      "Toallas quirúrgicas y de baño",
-      "Uniformes quirúrgicos",
-      "Almohadas",
-    ],
+      "Playeras para rutas con diseño y confección personalizada, sublimación de alta calidad y DTF según la identidad de tu grupo o evento.",
+    items: ["Playeras para rutas", "Sublimación", "DTF"],
+    image: "/images/uniformes/categorias/rutas.png",
+    imageAlt: "Uniforme de rutas fabricado por DZR",
   },
   {
-    slug: "corporativos",
-    title: "Corporativos, ejecutivos y escolares",
+    slug: "carreras",
+    title: "Carreras",
     description:
-      "Asesoría de diseño y confección para uniformes corporativos, ejecutivos, de seguridad, protección civil y escolares.",
-    items: ["Uniformes corporativos", "Uniformes ejecutivos", "Seguridad y protección civil", "Uniformes escolares"],
-    image: "/images/uniformes/polo-corporativo.webp",
-    imageAlt: "Playera tipo polo corporativa fabricada por DZR",
+      "Playeras para carreras: diseño textil, personalización y acabados listos para eventos deportivos y equipos de running.",
+    items: ["Playeras para carreras", "Sublimación", "DTF"],
+    image: "/images/uniformes/categorias/carreras.jpg",
+    imageAlt: "Uniforme de carreras fabricado por DZR",
+  },
+  {
+    slug: "conjunto-deportivo",
+    title: "Conjuntos deportivos",
+    description:
+      "Conjuntos deportivos completos con diseño y confección a la medida; incluye complementos como morrales y buffs de la línea deportiva DZR.",
+    items: ["Conjunto completo", "Morrales", "Buffs", "Sublimación", "DTF"],
+    // image: "/images/uniformes/categorias/conjuntoDeportivo.jpg",
+    // imageAlt: "Conjunto deportivo fabricado por DZR",
   },
 ] as const;
 
@@ -218,9 +215,33 @@ export const OUR_PRODUCTS = [
       { src: "/images/uniformes/detalle-tela.webp", alt: "Detalle de la tela del uniforme de fútbol fabricado por DZR" },
     ],
   },
-  { slug: "basquetbol", title: "Básquetbol", images: [] },
-  { slug: "rutas", title: "Rutas", images: [] },
-  { slug: "carreras", title: "Carreras", images: [] },
+
+  { 
+    slug: "basquetbol", 
+    title: "Básquetbol", 
+    images: [
+      //{ src: "/images/uniformes/uniforme-completo.webp", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
+    ] },
+
+  { 
+    slug: "rutas", 
+    title: "Rutas", 
+    images: [
+      { src: "/images/servicios/rutas1.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
+      { src: "/images/servicios/rutas2.png", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
+    ]},
+
+  { 
+    slug: "carreras", 
+    title: "Carreras", 
+    images: [
+      { src: "/images/servicios/carreras1.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/servicios/carreras3.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/servicios/carreras2.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/servicios/carreras4.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/servicios/carreras5.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/servicios/carreras6.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+    ] },
   { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
 ] as const;
 
