@@ -57,11 +57,9 @@ export const NAV_LINKS = [
   { label: "Servicios", href: "/servicios" },
   { label: "Showrooms", href: "/showrooms" },
   { label: "Contacto", href: "/contacto" },
+  { label: "Nuestro trabajo", href: "/nuestro-trabajo" },
 ] as const;
 
-// Puntos físicos de entrega/recolección/levantamiento de pedido dentro de
-// Durango. No agregar puntos adicionales sin dirección real confirmada por
-// el cliente (regla del proyecto: no inventar direcciones).
 export const SHOWROOMS = [
   {
     slug: "planta-nuevo-durango",
