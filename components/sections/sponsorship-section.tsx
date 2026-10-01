@@ -7,7 +7,10 @@ import { SPONSORED_TEAMS } from "@/lib/constants";
 
 export function SponsorshipSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+    <section
+      id="sponsorship-section"
+      className="relative overflow-hidden bg-white py-24 sm:py-32"
+    >
       <RayPattern id="sponsorship-pattern" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

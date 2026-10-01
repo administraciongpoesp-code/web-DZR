@@ -1,5 +1,4 @@
 import { Hero } from "@/components/sections/hero";
-import { JerseyShowcase } from "@/components/sections/jersey-showcase";
 import { SponsorshipSection } from "@/components/sections/sponsorship-section";
 import { JerseyGallery } from "@/components/sections/jersey-gallery";
 import { ProcessSection } from "@/components/sections/process-section";
@@ -11,7 +10,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <JerseyShowcase />
       <SponsorshipSection />
       <JerseyGallery />
       <ProcessSection />
