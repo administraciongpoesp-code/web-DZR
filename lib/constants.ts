@@ -157,7 +157,7 @@ export const PRODUCT_LINES = [
     description:
       "Confección y diseño textil para equipos de fútbol: sublimación de alta calidad, DTF y uniforme completo para competencia.",
     items: ["Playera", "Short", "Medias", "Sublimación", "DTF"],
-    image: "/images/uniformes/categorias/futbol.jpg",
+    image: "/images/futbol/1.jpg",
     imageAlt: "Uniforme de fútbol fabricado por DZR",
   },
   {
@@ -166,8 +166,8 @@ export const PRODUCT_LINES = [
     description:
       "Uniformes de básquetbol con diseño personalizado, confección textil y acabados pensados para el rendimiento en cancha.",
     items: ["Jersey", "Short", "Sublimación", "DTF"],
-    // image: "/images/uniformes/categorias/basquetbol.jpg",
-    // imageAlt: "Uniforme de basquetbol fabricado por DZR",
+    image: "/images/basquetbol/1.jpeg",
+    imageAlt: "Uniforme de basquetbol fabricado por DZR",
   },
   {
     slug: "rutas",
@@ -215,27 +215,28 @@ export const OUR_PRODUCTS = [
     slug: "basquetbol", 
     title: "Básquetbol", 
     images: [
-      //{ src: "/images/uniformes/uniforme-completo.webp", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
+      { src: "/images/basquetbol/2.jpeg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
+      { src: "/images/basquetbol/1.jpeg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
     ] },
 
   { 
     slug: "rutas", 
     title: "Rutas", 
     images: [
-      { src: "/images/servicios/rutas1.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
-      { src: "/images/servicios/rutas2.png", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
+      { src: "/images/rutas/rutas1.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
+      { src: "/images/rutas/rutas2.png", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
     ]},
 
   { 
     slug: "carreras", 
     title: "Carreras", 
     images: [
-      { src: "/images/servicios/carreras1.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/servicios/carreras3.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/servicios/carreras2.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/servicios/carreras4.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/servicios/carreras5.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/servicios/carreras6.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/carreras/carreras1.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/carreras/carreras3.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/carreras/carreras2.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/carreras/carreras4.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/carreras/carreras5.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
+      { src: "/images/carreras/carreras6.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
     ] },
   { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
 ] as const;

@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 type JerseyView = { id: "frontal" | "posterior"; label: string; src: string };
 
 const VIEWS: readonly JerseyView[] = [
-  { id: "frontal", label: "Vista frontal", src: "/images/uniformes/vista-frontal.webp" },
+  { id: "frontal", label: "Vista frontal", src: "/images/futbol/6.png" },
   { id: "posterior", label: "Vista posterior", src: "/images/uniformes/vista-posterior.webp" },
 ];
 
