@@ -203,9 +203,6 @@ export const OUR_PRODUCTS = [
     slug: "futbol",
     title: "Fútbol",
     images: [
-      { src: "/images/uniformes/uniforme-completo.webp", alt: "Uniforme de fútbol fabricado por DZR, conjunto completo" },
-      { src: "/images/uniformes/vista-frontal.webp", alt: "Uniforme de fútbol fabricado por DZR, vista frontal" },
-      { src: "/images/uniformes/vista-posterior.webp", alt: "Uniforme de fútbol fabricado por DZR, vista posterior" },
       { src: "/images/uniformes/en-cancha.webp", alt: "Uniforme de fútbol fabricado por DZR en cancha" },
       { src: "/images/uniformes/detalle-tela.webp", alt: "Detalle de la tela del uniforme de fútbol fabricado por DZR" },
     ],
@@ -231,12 +228,8 @@ export const OUR_PRODUCTS = [
     slug: "carreras", 
     title: "Carreras", 
     images: [
-      { src: "/images/carreras/carreras1.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
       { src: "/images/carreras/carreras3.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/carreras/carreras2.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
       { src: "/images/carreras/carreras4.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/carreras/carreras5.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-      { src: "/images/carreras/carreras6.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
     ] },
   { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
 ] as const;
@@ -278,11 +271,6 @@ export const CLIENTS = [
   "Grupo Peñoles",
 ] as const;
 
-// Equipos + clientes institucionales para el slider de logos de "Nosotros"
-// (Inicio). Solo Alacranes y Leñadores tienen archivo de logo real
-// disponible por ahora — el resto queda con `logo: null` y se muestra con
-// el nombre en texto hasta recibir su logo oficial (no usar logos que no
-// sean los reales/autorizados por cada cliente).
 export const TRUSTED_LOGOS: { name: string; logo: string | null }[] = [
   { name: "Alacranes de Durango", logo: "/images/teams/alacranes-durango.webp" },
   { name: "Leñadores de Durango", logo: "/images/teams/lenadores-durango.webp" },
