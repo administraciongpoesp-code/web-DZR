@@ -28,6 +28,7 @@ export function Hero() {
         <Image
           src={JERSEY_IMAGE}
           alt=""
+          unoptimized
           fill
           sizes="100vw"
           priority
@@ -333,6 +334,7 @@ export function Hero() {
               <Image
                 src={JERSEY_IMAGE}
                 alt={`Jersey oficial de ${SPONSORED_TEAMS.primary.name}, fabricado por DZR`}
+                unoptimized
                 fill
                 sizes="(min-width: 1024px) 55vw, 100vw"
                 priority
