@@ -38,7 +38,7 @@ const SERVICES = [
   {
     icon: ShieldCheck,
     title: "Control de calidad y postventa",
-    description: "Producimos bajo control de calidad y damos servicio postventa para un mejor servicio.",
+    description: "Producimos bajo estrictos estándares de calidad y te acompañamos incluso después de la entrega.",
   },
 ] as const;
 

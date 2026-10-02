@@ -81,7 +81,6 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="relative z-20 max-w-[650px]"
           >
-
             {/* TITULO */}
             <h1 className="font-black uppercase leading-[0.98] tracking-[-0.02em]">
               <span className="block text-[clamp(3rem,5vw,5.4rem)]">
@@ -215,7 +214,7 @@ export function Hero() {
             </div>
 
             {/* =================================================
-                PROVEEDOR OFICIAL
+                SOCIO COMERCIAL OFICIAL
             ================================================= */}
             <div className="absolute bottom-[3%] right-[-1%] z-30 flex items-center gap-3 rounded-xl border border-white/10 bg-black/80 px-5 py-3 shadow-xl backdrop-blur-md">
               <div className="relative h-12 w-12 shrink-0 rounded-full bg-white p-1">
@@ -229,7 +228,7 @@ export function Hero() {
 
               <div>
                 <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/65">
-                  Proveedor oficial de
+                  Socio comercial oficial de
                 </p>
 
                 <p className="text-xs font-black uppercase tracking-[0.08em]">

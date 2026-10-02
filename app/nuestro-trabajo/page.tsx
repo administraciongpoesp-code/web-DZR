@@ -284,7 +284,7 @@ export default function NuestroTrabajoPage() {
             DZR
           </p>
 
-          <h1 className="mt-3 text-4xl font-black uppercase tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="mt-3 text-4xl font-black uppercase tracking-[0.02em] sm:text-5xl md:text-6xl">
             Nuestro trabajo
           </h1>
 

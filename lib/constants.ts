@@ -87,7 +87,7 @@ export const SHOWROOMS = [
 // Cifras del sitio web anterior de DZR — no confirmadas en el brochure 2024.
 // Mostrar siempre junto a su etiqueta de verificación (ver StatsBar).
 export const UNVERIFIED_STATS = [
-  { value: "+14", label: "años de experiencia", verified: true },
+  { value: "+10", label: "años de experiencia", verified: true },
   { value: "+5,000", label: "equipos vestidos", verified: true },
   { value: "+25,000", label: "uniformes realizados", verified: true },
 ] as const;
@@ -212,7 +212,8 @@ export const OUR_PRODUCTS = [
     images: [
       { src: "/images/basquetbol/basquetbol2.jpg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
       { src: "/images/basquetbol/basquetbol1.jpg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
-    ] },
+    ] 
+  },
 
   { 
     slug: "rutas", 
@@ -220,7 +221,8 @@ export const OUR_PRODUCTS = [
     images: [
       { src: "/images/rutas/rutas1.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
       { src: "/images/rutas/rutas2.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
-    ]},
+    ]
+  },
 
   { 
     slug: "carreras", 
@@ -228,7 +230,8 @@ export const OUR_PRODUCTS = [
     images: [
       { src: "/images/carreras/carreras3.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
       { src: "/images/carreras/carreras4.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
-    ] },
+    ] 
+  },
   { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
 ] as const;
 

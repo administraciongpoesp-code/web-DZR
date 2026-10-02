@@ -18,7 +18,9 @@ export function SponsorshipSection() {
           <SectionHeading
             eyebrow="DZR × Alacranes de Durango"
             title="Una alianza que viste con orgullo a Durango"
-            description="DZR diseña, confecciona y entrega el uniforme oficial de Alacranes de Durango, equipo participante en la Liga de Expansión MX. Para DZR, esta alianza representa la oportunidad de mostrar, dentro y fuera de la cancha, la misma calidad de manufactura que ofrece a cada uno de sus clientes. Para Alacranes, es contar con un aliado local que entiende su identidad y responde con producción propia, hecha en Durango."
+            description="DZR diseña y confecciona el uniforme oficial de Alacranes de Durango, equipo participante en la Liga de Expansión MX. 
+            Para DZR, esta alianza representa la oportunidad de mostrar una vez más, el compromiso y la calidad que siempre ha ofrecido a cada uno de sus clientes.
+            Nos sentimos orgullos de vestir a los Alacranes de Durango."
           />
 
           <div className="flex items-center justify-center gap-8 rounded-2xl border border-dezara-mist/20 bg-dezara-fog p-10 sm:p-14">
