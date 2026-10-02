@@ -13,7 +13,7 @@ import {
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { FABRIC, SPONSORED_TEAMS } from "@/lib/constants";
 
-const JERSEY_IMAGE = "/images/futbol/6.png";
+const JERSEY_IMAGE = "/images/alacranes/alacranes20.jpg";
 
 export function Hero() {
   return (
