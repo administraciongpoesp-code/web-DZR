@@ -155,7 +155,7 @@ export const PRODUCT_LINES = [
     description:
       "Confección y diseño textil para equipos de fútbol: sublimación de alta calidad, DTF y uniforme completo para competencia.",
     items: ["Playera", "Short", "Medias", "Sublimación", "DTF"],
-    image: "/images/futbol/1.jpg",
+    image: "/images/futbol/futbol1.jpg",
     imageAlt: "Uniforme de fútbol fabricado por DZR",
   },
   {
@@ -164,7 +164,7 @@ export const PRODUCT_LINES = [
     description:
       "Uniformes de básquetbol con diseño personalizado, confección textil y acabados pensados para el rendimiento en cancha.",
     items: ["Jersey", "Short", "Sublimación", "DTF"],
-    image: "/images/basquetbol/1.jpeg",
+    image: "/images/basquetbol/basquetbol1.jpg",
     imageAlt: "Uniforme de basquetbol fabricado por DZR",
   },
   {
@@ -173,7 +173,7 @@ export const PRODUCT_LINES = [
     description:
       "Playeras para rutas con diseño y confección personalizada, sublimación de alta calidad y DTF según la identidad de tu grupo o evento.",
     items: ["Playeras para rutas", "Sublimación", "DTF", "Buffs", "Morrales"],
-    image: "/images/uniformes/categorias/rutas.png",
+    image: "/images/rutas/rutas1.jpg",
     imageAlt: "Uniforme de rutas fabricado por DZR",
   },
   {
@@ -182,7 +182,7 @@ export const PRODUCT_LINES = [
     description:
       "Playeras para carreras: diseño textil, personalización y acabados listos para eventos deportivos y equipos de running.",
     items: ["Playeras para carreras", "Sublimación", "DTF"],
-    image: "/images/uniformes/categorias/carreras.jpg",
+    image: "/images/carreras/carreras6.jpg",
     imageAlt: "Uniforme de carreras fabricado por DZR",
   },
   {
@@ -201,8 +201,8 @@ export const OUR_PRODUCTS = [
     slug: "futbol",
     title: "Fútbol",
     images: [
-      { src: "/images/uniformes/en-cancha.webp", alt: "Uniforme de fútbol fabricado por DZR en cancha" },
-      { src: "/images/uniformes/detalle-tela.webp", alt: "Detalle de la tela del uniforme de fútbol fabricado por DZR" },
+      { src: "/images/alacranes/alacranes13.jpg", alt: "Uniforme de fútbol fabricado por DZR en cancha" },
+      { src: "/images/alacranes/alacranes9.jpg", alt: "Detalle de la tela del uniforme de fútbol fabricado por DZR" },
     ],
   },
 
@@ -210,8 +210,8 @@ export const OUR_PRODUCTS = [
     slug: "basquetbol", 
     title: "Básquetbol", 
     images: [
-      { src: "/images/basquetbol/2.jpeg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
-      { src: "/images/basquetbol/1.jpeg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
+      { src: "/images/basquetbol/basquetbol2.jpg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
+      { src: "/images/basquetbol/basquetbol1.jpg", alt: "Uniforme de basquetbol fabricado por DZR, conjunto completo" },
     ] },
 
   { 
@@ -219,7 +219,7 @@ export const OUR_PRODUCTS = [
     title: "Rutas", 
     images: [
       { src: "/images/rutas/rutas1.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
-      { src: "/images/rutas/rutas2.png", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
+      { src: "/images/rutas/rutas2.jpg", alt: "Uniforme de rutas fabricado por DZR, conjunto completo" },
     ]},
 
   { 

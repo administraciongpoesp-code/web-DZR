@@ -6,12 +6,12 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { SPONSORED_TEAMS } from "@/lib/constants";
 
 const GALLERY_SLOTS = [
-  { label: "Vista frontal", src: "/images/uniformes/vista-frontal.webp" },
-  { label: "Vista posterior", src: "/images/uniformes/vista-posterior.webp" },
-  { label: "Detalle del escudo", src: "/images/uniformes/detalle-escudo.webp" },
-  { label: "Detalle de la tela", src: "/images/uniformes/detalle-tela.webp" },
-  { label: "Uniforme completo", src: "/images/uniformes/uniforme-completo.webp" },
-  { label: "En cancha", src: "/images/uniformes/en-cancha.webp" },
+  { label: "Vista frontal", src: "/images/alacranes/alacranes11.jpg" },
+  { label: "Vista posterior", src: "/images/alacranes/alacranes10.jpg" },
+  { label: "Detalle del escudo", src: "/images/alacranes/alacranes3.jpg" },
+  { label: "Detalle de la tela", src: "/images/alacranes/alacranes9.jpg" },
+  { label: "Uniforme completo", src: "/images/alacranes/alacranes15.jpg" },
+  { label: "En cancha", src: "/images/alacranes/alacranes13.jpg" },
 ] as const;
 
 /**
