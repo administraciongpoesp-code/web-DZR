@@ -24,7 +24,7 @@ const anton = Anton({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "DZR — Vestimos tu pasión | Fábrica de uniformes en Durango",
+    default: "DZR",
     template: "%s | DZR",
   },
   description:
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: SITE.url,
     siteName: "DZR",
-    title: "DZR — Vestimos tu pasión",
+    title: "DZR",
     description:
       "Fábrica de uniformes en Durango y patrocinador oficial de Alacranes de Durango. Deportivos, industriales, médicos y corporativos.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DZR — Vestimos tu pasión",
+    title: "DZR",
     description: "Fábrica de uniformes en Durango y patrocinador oficial de Alacranes de Durango.",
   },
 };
