@@ -79,13 +79,10 @@ export const SHOWROOMS = [
       line2: "C.P. 34090, Durango, Dgo.",
     },
     services: ["Entrega", "Recolección", "Levantamiento de pedido"],
-    // Confirmado directamente por el cliente.
     phone: "618 812 9511" as string | null,
   },
 ] as const;
 
-// Cifras del sitio web anterior de DZR — no confirmadas en el brochure 2024.
-// Mostrar siempre junto a su etiqueta de verificación (ver StatsBar).
 export const UNVERIFIED_STATS = [
   { value: "+10", label: "años de experiencia", verified: true },
   { value: "+5,000", label: "equipos vestidos", verified: true },
@@ -143,11 +140,6 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-/**
- * Categorías de la página /uniformes (catálogo deportivo).
- * Imagen principal por categoría (opcional): public/images/uniformes/categorias/{slug}.webp
- * — si no existe el archivo, la página muestra el placeholder automáticamente.
- */
 export const PRODUCT_LINES = [
   {
     slug: "futbol",
@@ -235,7 +227,6 @@ export const OUR_PRODUCTS = [
   { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
 ] as const;
 
-// Telas documentadas en el brochure — exclusivas de la línea médica/hospitalaria.
 export const MEDICAL_FABRICS = [
   { name: "Indolino", composition: "100% algodón" },
   { name: "Bramante", composition: "100% algodón" },
@@ -262,21 +253,16 @@ export const BRANDS = [
   "Addiction to Comfort",
 ] as const;
 
-export const CLIENTS = [
-  "Gobierno del Estado de Durango",
-  "Municipio de Durango",
-  "Municipio de Canatlán",
-  "Municipio de Gómez Palacio",
-  "Municipio de Guadalupe Victoria",
-  "Primero Empresa Minera",
-  "Grupo Peñoles",
-] as const;
-
 export const TRUSTED_LOGOS: { name: string; logo: string | null }[] = [
   { name: "Alacranes de Durango", logo: "/images/teams/alacranes-durango.webp" },
   { name: "Leñadores de Durango", logo: "/images/teams/lenadores-durango.webp" },
-  { name: "Generales de Durango", logo: null },
-  ...CLIENTS.map((name) => ({ name, logo: null as string | null })),
+  { name: "Deportes España", logo: "/images/logotipos/deportes.png" },
+  { name: "Campestre", logo: "/images/logotipos/campestre.png" },
+  { name: "Canaco", logo: "/images/logotipos/canaco.png" },
+  { name: "ITD", logo: "/images/logotipos/itd.png" },
+  { name: "ITQ", logo: "/images/logotipos/itq.png" },
+  { name: "Gobierno del Estado de Durango", logo: "/images/logotipos/gobiernodgo.png" },
+  { name: "Municipio de Durango", logo: "/images/logotipos/municipDgo.png" },
 ];
 
 export const UNIFORM_TYPE_OPTIONS = [

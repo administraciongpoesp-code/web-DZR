@@ -7,9 +7,6 @@ import { RayPattern } from "@/components/ray-pattern";
 import { SectionHeading } from "@/components/section-heading";
 import { SITE, TRUSTED_LOGOS, UNVERIFIED_STATS } from "@/lib/constants";
 
-// Se duplica la lista para lograr el loop infinito del slider: la pista
-// anima de 0% a -50% de su propio ancho, y como las dos mitades son
-// idénticas, el ciclo se ve continuo sin salto.
 const LOGO_TRACK = [...TRUSTED_LOGOS, ...TRUSTED_LOGOS];
 
 export function AboutSection() {
@@ -63,15 +60,15 @@ export function AboutSection() {
           {LOGO_TRACK.map((client, index) => (
             <div
               key={`${client.name}-${index}`}
-              className="flex h-16 w-36 shrink-0 items-center justify-center sm:w-40"
+              className="flex h-24 w-40 shrink-0 items-center justify-center sm:w-44"
             >
               {client.logo ? (
                 <Image
                   src={client.logo}
                   alt={client.name}
-                  width={140}
-                  height={64}
-                  className="max-h-14 w-auto object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                  width={150}
+                  height={40}
+                  className="max-h-20 w-auto object-contain"
                 />
               ) : (
                 <span className="w-full rounded-md border border-dezara-mist/20 bg-dezara-fog px-3 py-3 text-center text-[0.65rem] font-semibold uppercase leading-tight tracking-wide text-dezara-ink/70">

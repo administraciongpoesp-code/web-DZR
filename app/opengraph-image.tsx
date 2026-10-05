@@ -6,7 +6,6 @@ export const alt = "DZR — Vestimos tu pasión";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Relación de aspecto real del logo oficial (3642x1370).
 const LOGO_WIDTH = 560;
 const LOGO_HEIGHT = Math.round((LOGO_WIDTH * 1370) / 3642);
 
@@ -31,18 +30,6 @@ export default async function OpengraphImage() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element -- next/og requires a plain <img>, not next/image */}
         <img src={logoSrc} width={LOGO_WIDTH} height={LOGO_HEIGHT} alt="" />
-        <div
-          style={{
-            marginTop: 24,
-            fontSize: 36,
-            color: "#c8102e",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: 6,
-          }}
-        >
-          Vestimos tu pasión
-        </div>
         <div style={{ marginTop: 16, fontSize: 24, color: "rgba(255,255,255,0.6)" }}>
           Fábrica de uniformes · Durango, México
         </div>
