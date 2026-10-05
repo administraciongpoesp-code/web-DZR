@@ -1,12 +1,5 @@
-/**
- * Fuente única de verdad de datos de negocio para el sitio DZR.
- * Todo el contenido aquí proviene del brochure oficial "DEZARA 2024" y de
- * dzr.com.mx. No modificar con datos no verificados —
- */
-
 export const SITE = {
   name: "DZR",
-  slogan: "Vestimos tu pasión.",
   url: "https://www.dzr.com.mx",
   description:
     "DZR es una empresa duranguense dedicada al diseño, fabricación y elaboración de prendas deportivas, con alianzas comerciales de prestigio nacional e internacional.",
@@ -14,13 +7,12 @@ export const SITE = {
 
 export const CONTACT = {
   whatsappDisplay: "618 140 26 35",
-  whatsappNumber: "526181402635", // E.164: 52 (México) + 6181402635, sin "1" (regla retirada en 2021)
+  whatsappNumber: "526181402635",
   email: "dzr.admon@outlook.com",
   addressPrimary: {
     line1: "Calle Olmos #126, Fracc. Industrial Nuevo Durango",
     line2: "C.P. 34127, Durango, Dgo.",
   },
-  // Dirección secundaria del brochure — vigencia sin confirmar por el cliente.
   addressSecondary: {
     line1: "Av. Peñuelas No. 15 Int. 101A, Santiago de Querétaro, Qro.",
     line2: "C.P. 76140",
@@ -71,9 +63,6 @@ export const SHOWROOMS = [
   {
     slug: "deportes-espana-cienega",
     name: "Deportes España — Col. Ciénega",
-    // Dirección verificada en directorios públicos (Waze, Ubico.me,
-    // LatinoPlaces, PlanetaMexico): C. Isauro Venzor #908 Ote, Col. Ciénega,
-    // C.P. 34090, Durango, Dgo.
     address: {
       line1: "C. Isauro Venzor #908 Ote, Col. Ciénega",
       line2: "C.P. 34090, Durango, Dgo.",

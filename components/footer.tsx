@@ -58,7 +58,6 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} DZR. Todos los derechos reservados.</p>
-          <p>{SITE.slogan}</p>
         </div>
       </div>
     </footer>
