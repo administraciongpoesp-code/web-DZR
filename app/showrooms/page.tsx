@@ -117,15 +117,7 @@ export default function ShowroomsPage() {
                 </div>
               );
             })}
-
-            <div className="flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-dezara-mist/30 bg-dezara-fog p-8 text-center lg:col-span-2">
-              <p className="text-sm font-bold uppercase tracking-wide text-dezara-ink">Más puntos próximamente</p>
-              <p className="max-w-sm text-sm text-dezara-mist">
-                Estamos ampliando nuestros puntos de entrega y recolección dentro de Durango. ¿Necesitas coordinar
-                en otra zona de la ciudad? Escríbenos y vemos la opción más cercana para ti.
-              </p>
-              <WhatsAppButton size="sm" message="showroom" label="Preguntar por otro punto" />
-            </div>
+ 
           </div>
         </div>
       </section>

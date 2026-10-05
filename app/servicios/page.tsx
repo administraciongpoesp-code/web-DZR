@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Handshake, Layers, Palette, ShieldCheck, Sparkles } from "lucide-react";
 
 import { RayPattern } from "@/components/ray-pattern";
@@ -22,12 +23,14 @@ const SERVICES = [
   {
     icon: Layers,
     title: "Experiencia completa",
-    description: "Otorgamos al cliente una experiencia completa desde el diseño, la confección y la venta.",
+    description:
+      "Otorgamos al cliente una experiencia completa desde el diseño, la confección y la venta.",
   },
   {
     icon: Sparkles,
     title: "Personalización",
-    description: "Bordado de alta calidad, sublimación de alta calidad y DTF para dar identidad a cada prenda.",
+    description:
+      "Bordado de alta calidad, sublimación de alta calidad y DTF para dar identidad a cada prenda.",
   },
   {
     icon: Handshake,
@@ -38,14 +41,33 @@ const SERVICES = [
   {
     icon: ShieldCheck,
     title: "Control de calidad y postventa",
-    description: "Producimos bajo estrictos estándares de calidad y te acompañamos incluso después de la entrega.",
+    description:
+      "Producimos bajo estrictos estándares de calidad y te acompañamos incluso después de la entrega.",
   },
 ] as const;
 
 export default function ServiciosPage() {
   return (
     <div className="bg-white">
-      <section className="border-b border-dezara-mist/15 bg-dezara-black pb-20 pt-32 text-white sm:pb-28 sm:pt-40">
+      <section className="relative isolate overflow-hidden border-b border-dezara-mist/15 bg-black pb-20 pt-32 text-white sm:pb-28 sm:pt-40">
+        <div className="absolute inset-0 -z-20 bg-black">
+          <div className="absolute inset-y-0 left-[20%] right-[20%]">
+            <Image
+              src="/images/fondo_servicios.jpg"
+              alt=""
+              fill
+              priority
+              sizes="60vw"
+              className="object-cover object-center"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black" />
+        </div>
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Servicios"
@@ -62,10 +84,20 @@ export default function ServiciosPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => (
-              <div key={service.title} className="rounded-xl border border-dezara-mist/15 bg-white p-8 shadow-sm">
-                <service.icon className="h-8 w-8 text-dezara-red" aria-hidden />
-                <h3 className="mt-4 font-sans text-lg font-bold uppercase tracking-wide text-dezara-ink">{service.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-dezara-mist">{service.description}</p>
+              <div
+                key={service.title}
+                className="rounded-xl border border-dezara-mist/15 bg-white p-8 shadow-sm"
+              >
+                <service.icon
+                  className="h-8 w-8 text-dezara-red"
+                  aria-hidden
+                />
+                <h3 className="mt-4 font-sans text-lg font-bold uppercase tracking-wide text-dezara-ink">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-dezara-mist">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
@@ -76,8 +108,13 @@ export default function ServiciosPage() {
 
       <section className="bg-dezara-red py-20 text-center text-white sm:py-28">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-balance text-3xl uppercase sm:text-4xl">¿Tienes un proyecto en mente?</h2>
-          <p className="mt-4 text-white/80">Cuéntanos qué necesitas y te ayudamos a diseñarlo, confeccionarlo y entregarlo.</p>
+          <h2 className="text-balance text-3xl uppercase sm:text-4xl">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <p className="mt-4 text-white/80">
+            Cuéntanos qué necesitas y te ayudamos a diseñarlo, confeccionarlo y
+            entregarlo.
+          </p>
           <WhatsAppButton size="lg" variant="outline" className="mt-8" />
         </div>
       </section>

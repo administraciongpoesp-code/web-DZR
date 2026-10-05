@@ -28,7 +28,6 @@ export default async function OpengraphImage() {
             "linear-gradient(135deg, #0b0b0c 0%, #0b0b0c 60%, #1a1a1c 100%)",
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element -- next/og requires a plain <img>, not next/image */}
         <img src={logoSrc} width={LOGO_WIDTH} height={LOGO_HEIGHT} alt="" />
         <div style={{ marginTop: 16, fontSize: 24, color: "rgba(255,255,255,0.6)" }}>
           Fábrica de uniformes · Durango, México

@@ -14,12 +14,6 @@ const GALLERY_SLOTS = [
   { label: "En cancha", src: "/images/alacranes/alacranes13.jpg" },
 ] as const;
 
-/**
- * Galería ampliada del uniforme de Alacranes de Durango. Usa la fotografía
- * real del jersey provista por el cliente (public/images/uniformes); si en
- * el futuro falta alguna vista, cae de nuevo en PlaceholderMedia en vez de
- * mostrar una imagen genérica.
- */
 export function JerseyGallery() {
   return (
     <section className="bg-dezara-black py-24 sm:py-32">

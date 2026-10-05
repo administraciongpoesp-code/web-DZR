@@ -157,35 +157,23 @@ export function Hero() {
               </div>
             </div>
 
-            {/* =================================================
-                WHATSAPP
-            ================================================= */}
             <div className="mt-9">
               <WhatsAppButton />
             </div>
           </motion.div>
 
-          {/* =================================================
-              COLUMNA DERECHA
-          ================================================= */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96, x: 30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
             className="relative flex min-h-[520px] items-center justify-center lg:min-h-[650px]"
           >
-            {/* MARCO TRASERO 1 */}
             <div className="absolute right-[5%] top-[7%] z-[3] h-[82%] w-[82%] rounded-[26px] border border-white/15" />
 
-            {/* MARCO TRASERO 2 */}
             <div className="absolute right-[2%] top-[4%] z-[3] h-[87%] w-[82%] rounded-[26px] border border-white/10" />
 
-            {/* BARRA ROJA SUPERIOR */}
             <div className="absolute right-[5%] top-[-2%] z-[4] h-[135px] w-[88px] -skew-x-[14deg] bg-red-600/85" />
 
-            {/* =================================================
-                FOTO DE LOS JUGADORES
-            ================================================= */}
             <div className="relative z-10 h-[490px] w-full max-w-[700px] overflow-hidden rounded-[25px] border border-white/25 bg-black/10 shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:h-[560px] lg:h-[630px]">
               <Image
                 src={HERO_PLAYERS}
@@ -198,9 +186,6 @@ export function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 to-transparent" />
             </div>
 
-            {/* =================================================
-                ORGULLO DURANGUENSE
-            ================================================= */}
             <div className="absolute right-[8%] top-[8%] z-30">
               <p className="text-xs font-bold uppercase tracking-[0.2em]">
                 Orgullo
@@ -213,9 +198,6 @@ export function Hero() {
               <div className="mt-3 h-[2px] w-14 bg-red-600" />
             </div>
 
-            {/* =================================================
-                SOCIO COMERCIAL OFICIAL
-            ================================================= */}
             <div className="absolute bottom-[3%] right-[-1%] z-30 flex items-center gap-3 rounded-xl border border-white/10 bg-black/80 px-5 py-3 shadow-xl backdrop-blur-md">
               <div className="relative h-12 w-12 shrink-0 rounded-full bg-white p-1">
                 <Image
@@ -237,15 +219,11 @@ export function Hero() {
               </div>
             </div>
 
-            {/* BARRA ROJA INFERIOR */}
             <div className="absolute bottom-[4%] left-[1%] z-[20] h-[100px] w-[35px] -skew-x-[14deg] bg-red-600" />
           </motion.div>
         </div>
       </div>
 
-      {/* =====================================================
-          INDICADOR DE SCROLL
-      ===================================================== */}
       <motion.a
         href="#sponsorship-section"
         initial={{ opacity: 0 }}

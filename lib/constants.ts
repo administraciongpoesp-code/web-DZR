@@ -183,8 +183,8 @@ export const PRODUCT_LINES = [
     description:
       "Conjuntos deportivos de pants y sudaderas personalizados, ideal para grupos de competencia escolar o equipos deportivos amateur.",
     items: ["Pantalonera", "Sudadera", "Sublimación"],
-    // image: "/images/uniformes/categorias/conjuntoDeportivo.jpg",
-    // imageAlt: "Conjunto deportivo fabricado por DZR",
+    image: "/images/conjuntos_deportivos/conjunto1.jpg",
+    imageAlt: "Conjunto deportivo fabricado por DZR",
   },
 ] as const;
 
@@ -224,7 +224,15 @@ export const OUR_PRODUCTS = [
       { src: "/images/carreras/carreras4.jpg", alt: "Uniforme de carreras fabricado por DZR, conjunto completo" },
     ] 
   },
-  { slug: "conjunto-deportivo", title: "Conjunto deportivo", images: [] },
+
+  { 
+    slug: "conjunto-deportivo", 
+    title: "Conjunto deportivo", 
+    images: [
+      { src: "/images/conjuntos_deportivos/conjunto1.jpg", alt: "Conjunto deportivo fabricado por DZR, conjunto completo" },
+      { src: "/images/conjuntos_deportivos/conjunto2.jpg", alt: "Conjunto deportivo fabricado por DZR, conjunto completo" },
+    ] 
+  },
 ] as const;
 
 export const MEDICAL_FABRICS = [
@@ -263,6 +271,10 @@ export const TRUSTED_LOGOS: { name: string; logo: string | null }[] = [
   { name: "ITQ", logo: "/images/logotipos/itq.png" },
   { name: "Gobierno del Estado de Durango", logo: "/images/logotipos/gobiernodgo.png" },
   { name: "Municipio de Durango", logo: "/images/logotipos/municipDgo.png" },
+  { name: "UJED", logo: "/images/logotipos/ujed.png" },
+  { name: "INFONAVIT", logo: "/images/logotipos/infonavit.png" },
+  { name: "morita", logo: "/images/logotipos/morita.png" },
+  { name: "versus", logo: "/images/logotipos/versus.png" },
 ];
 
 export const UNIFORM_TYPE_OPTIONS = [

@@ -8,13 +8,14 @@ export const metadata: Metadata = {
 };
 
 const WORK_IMAGES = [
-  // =========================================================
-  // FOTOS MEZCLADAS
-  // =========================================================
-
   {
     src: "/images/alacranes/alacranes1.jpg",
     alt: "Trabajo de DZR para Alacranes de Durango",
+    category: "Alacranes de Durango",
+  },
+  {
+    src: "/images/conjuntos_deportivos/conjunto2.jpg",
+    alt: "Uniforme personalizado de Alacranes",
     category: "Alacranes de Durango",
   },
   {
@@ -200,7 +201,11 @@ const WORK_IMAGES = [
     alt: "Uniforme personalizado de Alacranes",
     category: "Alacranes de Durango",
   },
-
+  {
+    src: "/images/conjuntos_deportivos/conjunto1.jpg",
+    alt: "Uniforme personalizado de Alacranes",
+    category: "Alacranes de Durango",
+  },
   {
     src: "/images/basquetbol/basquetbol2.jpg",
     alt: "Uniforme de básquetbol fabricado por DZR",
@@ -290,6 +295,7 @@ export default function NuestroTrabajoPage() {
 
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
             Conoce algunos de nuestros trabajos y proyectos realizados.
+            <br/>  
             Diseño, fabricación y detalles que forman parte de cada prenda.
           </p>
         </div>

@@ -21,9 +21,6 @@ export function Hero() {
       id="inicio"
       className="relative isolate min-h-[calc(100vh-72px)] overflow-hidden bg-dezara-black text-white"
     >
-      {/* =========================================================
-          FONDO BLURRY
-          ========================================================= */}
       <div className="absolute inset-0 -z-30 overflow-hidden">
         <Image
           src={JERSEY_IMAGE}
@@ -36,19 +33,11 @@ export function Hero() {
           aria-hidden
         />
 
-        {/* Oscurece la fotografía */}
         <div className="absolute inset-0 bg-black/70" />
-
-        {/* Hace que el lado izquierdo sea más oscuro para el texto */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/45" />
-
-        {/* Degradado inferior */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
       </div>
 
-      {/* =========================================================
-          TEXTURA / GRID
-          ========================================================= */}
       <div
         className="pointer-events-none absolute inset-0 -z-20 opacity-[0.08]"
         style={{
@@ -58,28 +47,19 @@ export function Hero() {
         aria-hidden
       />
 
-      {/* Glow rojo */}
       <div
         className="pointer-events-none absolute -left-40 top-1/3 -z-10 h-[500px] w-[500px] rounded-full bg-dezara-red/15 blur-[120px]"
         aria-hidden
       />
 
-      {/* Glow verde */}
       <div
         className="pointer-events-none absolute -right-40 bottom-0 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[120px]"
         aria-hidden
       />
 
-      {/* =========================================================
-          CONTENIDO
-          ========================================================= */}
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-72px)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid w-full items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-20">
-          {/* =====================================================
-              COLUMNA IZQUIERDA
-              ===================================================== */}
           <div>
-            {/* Proveedor oficial */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,7 +87,6 @@ export function Hero() {
               </p>
             </motion.div>
 
-            {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
@@ -121,7 +100,6 @@ export function Hero() {
               </span>
             </motion.div>
 
-            {/* Título */}
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -133,7 +111,6 @@ export function Hero() {
               de Durango
             </motion.h1>
 
-            {/* Descripción */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -145,9 +122,6 @@ export function Hero() {
               de calidad, de principio a fin.
             </motion.p>
 
-            {/* ===================================================
-                BENEFICIOS
-                =================================================== */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -209,9 +183,6 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* ===================================================
-                INFORMACIÓN DE TELA
-                =================================================== */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -236,9 +207,6 @@ export function Hero() {
               </p>
             </motion.div>
 
-            {/* ===================================================
-                DETALLES
-                =================================================== */}
             <motion.ul
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
