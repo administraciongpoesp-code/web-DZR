@@ -65,11 +65,11 @@ export function Hero() {
             className="relative z-20 max-w-[650px]"
           >
             <h1 className="mt-6 font-black uppercase leading-[0.98] tracking-[-0.02em] sm:mt-0">
-              <span className="block text-[clamp(3rem,5vw,5.4rem)]">
+              <span className="block text-[clamp(2.5rem,11vw,5.4rem)]">
                 El nuevo uniforme de
               </span>
 
-              <span className="block text-[clamp(3rem,5vw,5.4rem)]">
+              <span className="block text-[clamp(2.5rem,11vw,5.4rem)]">
                 <span className="text-red-600">Alacranes</span>{" "}
                 de Durango
               </span>
@@ -81,50 +81,50 @@ export function Hero() {
               calidad, de principio a fin.
             </p>
 
-            <div className="mt-9 grid max-w-[620px] grid-cols-3 gap-2 sm:gap-4">
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
-                  <Layers className="h-4 w-4 text-red-500 sm:h-5 sm:w-5" />
+            <div className="mt-9 grid max-w-[620px] grid-cols-3 gap-1 sm:gap-4">
+              <div className="flex min-w-0 items-center gap-1 sm:gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
+                  <Layers className="h-3.5 w-3.5 text-red-500 sm:h-5 sm:w-5" />
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-[9px] font-bold uppercase leading-4 sm:text-[11px]">
+                  <p className="text-[8px] font-bold uppercase leading-3 sm:text-[11px] sm:leading-4">
                     Materiales
                   </p>
 
-                  <p className="text-[8px] font-bold uppercase leading-3 text-white/70 sm:text-[10px] sm:leading-4">
+                  <p className="text-[7px] font-bold uppercase leading-[0.65rem] text-white/70 sm:text-[10px] sm:leading-4">
                     Ligeros y transpirables
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
-                  <ShieldCheck className="h-4 w-4 text-red-500 sm:h-5 sm:w-5" />
+              <div className="flex min-w-0 items-center gap-1 sm:gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
+                  <ShieldCheck className="h-3.5 w-3.5 text-red-500 sm:h-5 sm:w-5" />
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-[9px] font-bold uppercase leading-4 sm:text-[11px]">
+                  <p className="text-[8px] font-bold uppercase leading-3 sm:text-[11px] sm:leading-4">
                     Diseño
                   </p>
 
-                  <p className="text-[8px] font-bold uppercase leading-3 text-white/70 sm:text-[10px] sm:leading-4">
+                  <p className="text-[7px] font-bold uppercase leading-[0.65rem] text-white/70 sm:text-[10px] sm:leading-4">
                     Personalizado
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
-                  <Star className="h-4 w-4 text-red-500 sm:h-5 sm:w-5" />
+              <div className="flex min-w-0 items-center gap-1 sm:gap-3">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
+                  <Star className="h-3.5 w-3.5 text-red-500 sm:h-5 sm:w-5" />
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-[9px] font-bold uppercase leading-4 sm:text-[11px]">
+                  <p className="text-[8px] font-bold uppercase leading-3 sm:text-[11px] sm:leading-4">
                     Fabricación
                   </p>
 
-                  <p className="text-[8px] font-bold uppercase leading-3 text-white/70 sm:text-[10px] sm:leading-4">
+                  <p className="text-[7px] font-bold uppercase leading-[0.65rem] text-white/70 sm:text-[10px] sm:leading-4">
                     Profesional
                   </p>
                 </div>
