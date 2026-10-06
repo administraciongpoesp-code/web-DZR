@@ -21,9 +21,6 @@ export function Hero() {
       id="inicio"
       className="relative isolate min-h-[calc(100vh+40px)] overflow-hidden bg-black text-white"
     >
-      {/* =====================================================
-          FONDO DEL ESTADIO
-      ===================================================== */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src={HERO_BACKGROUND}
@@ -42,9 +39,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-red-950/5 mix-blend-multiply" />
       </div>
 
-      {/* =====================================================
-          GRID DECORATIVO
-      ===================================================== */}
       <div
         className="pointer-events-none absolute inset-0 z-[1] opacity-[0.07]"
         style={{
@@ -56,33 +50,21 @@ export function Hero() {
         }}
       />
 
-      {/* =====================================================
-          ACENTOS ROJOS
-      ===================================================== */}
-
       <div className="absolute right-[34%] top-0 z-[2] h-[150px] w-[80px] -skew-x-[14deg] bg-red-600/85" />
 
       <div className="absolute right-[4%] top-[58%] z-[2] h-[260px] w-[65px] -skew-x-[12deg] bg-red-600/75" />
 
       <div className="absolute bottom-0 left-[5%] z-[2] h-[2px] w-[380px] bg-red-600/70" />
 
-      {/* =====================================================
-          CONTENIDO
-      ===================================================== */}
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh+40px)] max-w-[1500px] items-center px-6 py-12 sm:px-10 lg:px-16">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-
-          {/* =================================================
-              COLUMNA IZQUIERDA
-          ================================================= */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="relative z-20 max-w-[650px]"
           >
-            {/* TITULO */}
-            <h1 className="font-black uppercase leading-[0.98] tracking-[-0.02em]">
+            <h1 className="mt-6 font-black uppercase leading-[0.98] tracking-[-0.02em] sm:mt-0">
               <span className="block text-[clamp(3rem,5vw,5.4rem)]">
                 El nuevo uniforme de
               </span>
@@ -93,64 +75,56 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* DESCRIPCIÓN */}
             <p className="mt-7 max-w-[590px] text-base leading-7 text-white/85 sm:text-lg">
               El jersey oficial fabricado por DZR para Alacranes de Durango,
               equipo de la Liga de Expansión MX. Diseño, confección y
               calidad, de principio a fin.
             </p>
 
-            {/* =================================================
-                BENEFICIOS
-            ================================================= */}
-            <div className="mt-9 grid max-w-[620px] grid-cols-3 gap-4">
-
-              {/* MATERIALES */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35">
-                  <Layers className="h-5 w-5 text-red-500" />
+            <div className="mt-9 grid max-w-[620px] grid-cols-3 gap-2 sm:gap-4">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
+                  <Layers className="h-4 w-4 text-red-500 sm:h-5 sm:w-5" />
                 </div>
 
-                <div>
-                  <p className="text-[11px] font-bold uppercase leading-4">
+                <div className="min-w-0">
+                  <p className="text-[9px] font-bold uppercase leading-4 sm:text-[11px]">
                     Materiales
                   </p>
 
-                  <p className="text-[10px] font-bold uppercase leading-4 text-white/70">
+                  <p className="text-[8px] font-bold uppercase leading-3 text-white/70 sm:text-[10px] sm:leading-4">
                     Ligeros y transpirables
                   </p>
                 </div>
               </div>
 
-              {/* DISEÑO */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35">
-                  <ShieldCheck className="h-5 w-5 text-red-500" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
+                  <ShieldCheck className="h-4 w-4 text-red-500 sm:h-5 sm:w-5" />
                 </div>
 
-                <div>
-                  <p className="text-[11px] font-bold uppercase leading-4">
+                <div className="min-w-0">
+                  <p className="text-[9px] font-bold uppercase leading-4 sm:text-[11px]">
                     Diseño
                   </p>
 
-                  <p className="text-[10px] font-bold uppercase leading-4 text-white/70">
+                  <p className="text-[8px] font-bold uppercase leading-3 text-white/70 sm:text-[10px] sm:leading-4">
                     Personalizado
                   </p>
                 </div>
               </div>
 
-              {/* FABRICACIÓN */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35">
-                  <Star className="h-5 w-5 text-red-500" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
+                  <Star className="h-4 w-4 text-red-500 sm:h-5 sm:w-5" />
                 </div>
 
-                <div>
-                  <p className="text-[11px] font-bold uppercase leading-4">
+                <div className="min-w-0">
+                  <p className="text-[9px] font-bold uppercase leading-4 sm:text-[11px]">
                     Fabricación
                   </p>
 
-                  <p className="text-[10px] font-bold uppercase leading-4 text-white/70">
+                  <p className="text-[8px] font-bold uppercase leading-3 text-white/70 sm:text-[10px] sm:leading-4">
                     Profesional
                   </p>
                 </div>
@@ -240,7 +214,6 @@ export function Hero() {
         </div>
       </motion.a>
 
-      {/* BORDE INFERIOR */}
       <div className="absolute bottom-0 left-0 right-0 z-20 h-px bg-red-600/70" />
     </section>
   );
