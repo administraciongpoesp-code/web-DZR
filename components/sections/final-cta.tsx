@@ -9,7 +9,7 @@ export function FinalCta() {
           ¿Quieres un uniforme con la misma calidad que el de Alacranes de Durango?
         </h2>
         <p className="mx-auto mt-4 max-w-none text-balance text-white/80">
-          Diseñamos y confeccionamos uniformes deportivos, industriales, médicos, corporativos y escolares con el mismo estándar de calidad. Cotiza el tuyo hoy mismo.
+          Diseñamos y confeccionamos uniformes deportivos, corporativos y escolares con el mismo estándar de calidad. Cotiza el tuyo hoy mismo.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <CTAButton href="/contacto" variant="primary" size="lg" className="bg-dezara-black text-white hover:bg-black/85">

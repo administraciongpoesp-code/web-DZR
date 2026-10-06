@@ -23,22 +23,30 @@ const anton = Anton({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
+
   title: {
     default: "DZR",
     template: "%s | DZR",
   },
+
   description:
-    "DZR es la fábrica de uniformes de Durango, patrocinador oficial de Alacranes de Durango. Uniformes deportivos, industriales, médicos y corporativos con diseño y confección a la medida.",
+    "DZR es una fábrica de uniformes en Durango especializada en uniformes deportivos, industriales, médicos y corporativos, con diseño y confección a la medida.",
+
   keywords: [
     "DZR",
     "uniformes Durango",
-    "Alacranes de Durango",
-    "fábrica de uniformes",
+    "fábrica de uniformes en Durango",
+    "uniformes personalizados",
     "uniformes deportivos",
     "uniformes industriales",
     "uniformes médicos",
+    "uniformes corporativos",
+    "fabricación de uniformes",
+    "confección de uniformes",
   ],
+
   authors: [{ name: "DZR" }],
+
   openGraph: {
     type: "website",
     locale: "es_MX",
@@ -46,18 +54,24 @@ export const metadata: Metadata = {
     siteName: "DZR",
     title: "DZR",
     description:
-      "Fábrica de uniformes en Durango y patrocinador oficial de Alacranes de Durango. Deportivos, industriales, médicos y corporativos.",
+      "Fábrica de uniformes en Durango. Uniformes deportivos, industriales, médicos y corporativos con diseño y confección a la medida.",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "DZR",
-    description: "Fábrica de uniformes en Durango y patrocinador oficial de Alacranes de Durango.",
+    description:
+      "Fábrica de uniformes en Durango. Uniformes deportivos, industriales, médicos y corporativos.",
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="es-MX" data-scroll-behavior="smooth" className={`${inter.variable} ${anton.variable}`}>
+    <html
+      lang="es-MX"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${anton.variable}`}
+    >
       <body className="font-sans antialiased">
         <a
           href="#main-content"
@@ -65,9 +79,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Saltar al contenido principal
         </a>
+
         <Navbar />
+
         <main id="main-content">{children}</main>
+
         <Footer />
+
         <FloatingWhatsAppButton />
       </body>
     </html>
