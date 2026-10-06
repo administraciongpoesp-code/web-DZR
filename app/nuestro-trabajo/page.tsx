@@ -9,13 +9,28 @@ export const metadata: Metadata = {
 
 const WORK_IMAGES = [
   {
+    src: "/images/alacranes/alacranes21.jpg",
+    alt: "Uniforme fabricado por DZR para Alacranes",
+    category: "Alacranes de Durango",
+  },
+  {
     src: "/images/alacranes/alacranes1.jpg",
     alt: "Trabajo de DZR para Alacranes de Durango",
     category: "Alacranes de Durango",
   },
   {
+    src: "/images/alacranes/alacranes25.jpg",
+    alt: "Uniforme fabricado por DZR para Alacranes",
+    category: "Alacranes de Durango",
+  },
+  {
     src: "/images/conjuntos_deportivos/conjunto2.jpg",
     alt: "Uniforme personalizado de Alacranes",
+    category: "Alacranes de Durango",
+  },
+  {
+    src: "/images/alacranes/alacranes23.jpg",
+    alt: "Uniforme fabricado por DZR para Alacranes",
     category: "Alacranes de Durango",
   },
   {
@@ -33,16 +48,25 @@ const WORK_IMAGES = [
     alt: "Playera para carreras fabricada por DZR",
     category: "Carreras",
   },
-
   {
     src: "/images/alacranes/alacranes7.jpg",
     alt: "Trabajo realizado por DZR para Alacranes",
     category: "Alacranes de Durango",
   },
   {
+    src: "/images/alacranes/alacranes24.jpg",
+    alt: "Uniforme fabricado por DZR para Alacranes",
+    category: "Alacranes de Durango",
+  },
+  {
     src: "/images/futbol/futbol8.jpg",
     alt: "Uniforme personalizado de fútbol DZR",
     category: "Fútbol",
+  },
+  {
+    src: "/images/alacranes/alacranes22.jpg",
+    alt: "Uniforme fabricado por DZR para Alacranes",
+    category: "Alacranes de Durango",
   },
   {
     src: "/images/basquetbol/basquetbol5.jpg",
@@ -96,7 +120,6 @@ const WORK_IMAGES = [
     alt: "Uniforme de fútbol personalizado DZR",
     category: "Fútbol",
   },
-
   {
     src: "/images/alacranes/alacranes5.jpg",
     alt: "Trabajo deportivo de DZR",
@@ -117,7 +140,6 @@ const WORK_IMAGES = [
     alt: "Trabajo deportivo realizado por DZR",
     category: "Alacranes de Durango",
   },
-
   {
     src: "/images/carreras/carreras6.jpg",
     alt: "Trabajo realizado por DZR para carreras",
@@ -242,7 +264,6 @@ const WORK_IMAGES = [
     alt: "Trabajo realizado por DZR",
     category: "Alacranes de Durango",
   },
-
   {
     src: "/images/futbol/futbol16.jpg",
     alt: "Trabajo deportivo realizado por DZR",
