@@ -64,6 +64,11 @@ const WORK_IMAGES = [
     category: "Fútbol",
   },
   {
+    src: "/images/gorras/gorra1.jpg",
+    alt: "Gorras fabricadas por DZR",
+    category: "Gorras",
+  },
+  {
     src: "/images/alacranes/alacranes22.jpg",
     alt: "Uniforme fabricado por DZR para Alacranes",
     category: "Alacranes de Durango",
@@ -78,7 +83,6 @@ const WORK_IMAGES = [
     alt: "Uniforme de Alacranes fabricado por DZR",
     category: "Alacranes de Durango",
   },
-
   {
     src: "/images/carreras/carreras5.jpg",
     alt: "Playera deportiva personalizada DZR",
@@ -99,11 +103,15 @@ const WORK_IMAGES = [
     alt: "Uniforme deportivo de básquetbol DZR",
     category: "Básquetbol",
   },
-
   {
     src: "/images/futbol/futbol14.jpg",
     alt: "Trabajo de confección DZR",
     category: "Fútbol",
+  },
+  {
+    src: "/images/gorras/gorra2.jpg",
+    alt: "Gorras fabricadas por DZR",
+    category: "Gorras",
   },
   {
     src: "/images/alacranes/alacranes10.jpg",
@@ -160,7 +168,6 @@ const WORK_IMAGES = [
     alt: "Uniforme personalizado de básquetbol DZR",
     category: "Básquetbol",
   },
-
   {
     src: "/images/alacranes/alacranes18.jpg",
     alt: "Uniforme deportivo de Alacranes",
@@ -181,7 +188,6 @@ const WORK_IMAGES = [
     alt: "Uniforme deportivo DZR para Alacranes",
     category: "Alacranes de Durango",
   },
-
   {
     src: "/images/futbol/futbol10.jpg",
     alt: "Trabajo de DZR en uniformes deportivos",
@@ -202,7 +208,6 @@ const WORK_IMAGES = [
     alt: "Uniforme fabricado por DZR para Alacranes",
     category: "Alacranes de Durango",
   },
-
   {
     src: "/images/futbol/futbol12.jpg",
     alt: "Trabajo realizado por DZR",
@@ -222,6 +227,11 @@ const WORK_IMAGES = [
     src: "/images/alacranes/alacranes16.jpg",
     alt: "Uniforme personalizado de Alacranes",
     category: "Alacranes de Durango",
+  },
+  {
+    src: "/images/gorras/gorra3.jpg",
+    alt: "Gorras fabricadas por DZR",
+    category: "Gorras",
   },
   {
     src: "/images/conjuntos_deportivos/conjunto1.jpg",
@@ -248,7 +258,6 @@ const WORK_IMAGES = [
     alt: "Uniforme deportivo personalizado DZR",
     category: "Fútbol",
   },
-
   {
     src: "/images/alacranes/alacranes11.jpg",
     alt: "Trabajo deportivo fabricado por DZR",
