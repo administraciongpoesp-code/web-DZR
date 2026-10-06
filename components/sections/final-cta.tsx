@@ -8,9 +8,6 @@ export function FinalCta() {
         <h2 className="text-balance text-3xl uppercase sm:text-4xl md:text-5xl">
           ¿Quieres un uniforme con la misma calidad que el de Alacranes de Durango?
         </h2>
-        <p className="mx-auto mt-4 max-w-none text-balance text-white/80">
-          Diseñamos y confeccionamos uniformes deportivos, corporativos y escolares con el mismo estándar de calidad. Cotiza el tuyo hoy mismo.
-        </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <CTAButton href="/contacto" variant="primary" size="lg" className="bg-dezara-black text-white hover:bg-black/85">
             Cotiza tu uniforme
