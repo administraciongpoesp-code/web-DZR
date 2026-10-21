@@ -138,10 +138,10 @@ export function Hero() {
         className="pointer-events-none absolute -right-10 top-[10%] -z-10 hidden h-[42rem] w-16 rotate-[28deg] bg-dezara-red/30 sm:block"
       />
       {/* Contenido principal */}
-      <div className="relative mx-auto flex w-full min-w-0 min-h-svh max-w-[1720px] flex-col px-5 pb-16 pt-28 sm:min-h-[760px] sm:px-8 sm:pb-24 sm:pt-32 lg:h-full lg:min-h-0 lg:px-[5vw] lg:pb-16 lg:pt-24">
+      <div className="relative mx-auto flex w-full min-w-0 min-h-svh max-w-[1720px] flex-col px-5 pb-8 pt-28 sm:min-h-[760px] sm:px-8 sm:pb-24 sm:pt-32 lg:h-full lg:min-h-0 lg:px-[5vw] lg:pb-16 lg:pt-24">
         {/* Socio comercial */}
         <div className="relative z-10 flex min-w-0 flex-col items-start gap-3 sm:gap-8 lg:gap-6">
-          <div className="-translate-y-7 flex items-center gap-3 sm:translate-y-0 sm:gap-4">
+          <div className="-translate-y-12 flex items-center gap-3 sm:translate-y-0 sm:gap-4">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/70 bg-white p-1.5 shadow-[0_0_32px_rgba(255,255,255,0.16)] sm:h-14 sm:w-14">
               <Image
                 src={SPONSORED_TEAMS.primary.crest}
@@ -167,7 +167,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
-            className="-mx-2 -translate-y-2 w-[calc(100%+1rem)] min-w-0 max-w-none text-center text-[clamp(1.55rem,7.6vw,2.55rem)] font-black italic uppercase leading-[0.98] tracking-[0.05em] text-white drop-shadow-[0_3px_24px_rgba(0,0,0,0.55)] sm:mx-0 sm:w-full sm:translate-y-0 sm:text-left sm:max-w-[700px] sm:text-[clamp(3.2rem,6.4vw,6.25rem)] sm:leading-[0.9] sm:tracking-[-0.005em]"
+            className="-mx-2 -translate-y-10 w-[calc(100%+1rem)] min-w-0 max-w-none text-center text-[clamp(1.55rem,7.6vw,2.55rem)] font-black italic uppercase leading-[0.98] tracking-[0.05em] text-white drop-shadow-[0_3px_24px_rgba(0,0,0,0.55)] sm:mx-0 sm:w-full sm:translate-y-0 sm:text-left sm:max-w-[700px] sm:text-[clamp(3.2rem,6.4vw,6.25rem)] sm:leading-[0.9] sm:tracking-[-0.005em]"
           >
             <span className="block whitespace-nowrap sm:hidden">
               EL NUEVO UNIFORME DE
@@ -185,7 +185,7 @@ export function Hero() {
               DURANGO
             </span>
           </motion.h1>
-          <p className="text-sm leading-6 text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] sm:hidden">
+          <p className="-translate-y-8 text-sm leading-6 text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] sm:hidden">
             El jersey oficial fabricado por DZR para Alacranes de Durango,
             equipo de la Liga de Expansión MX. Diseño, confección y calidad,
             de principio a fin.
@@ -254,7 +254,7 @@ export function Hero() {
         type="button"
         onClick={previousSlide}
         aria-label="Imagen anterior"
-        className="absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/45 bg-black/35 text-white shadow-lg backdrop-blur-md transition-all hover:scale-105 hover:border-dezara-red hover:bg-dezara-red sm:left-7 sm:h-12 sm:w-12"
+        className="absolute left-4 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/45 bg-black/35 text-white shadow-lg backdrop-blur-md transition-all hover:scale-105 hover:border-dezara-red hover:bg-dezara-red sm:left-7 sm:flex sm:h-12 sm:w-12"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -264,7 +264,7 @@ export function Hero() {
         type="button"
         onClick={nextSlide}
         aria-label="Imagen siguiente"
-        className="absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/45 bg-black/35 text-white shadow-lg backdrop-blur-md transition-all hover:scale-105 hover:border-dezara-red hover:bg-dezara-red sm:right-7 sm:h-12 sm:w-12"
+        className="absolute right-4 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/45 bg-black/35 text-white shadow-lg backdrop-blur-md transition-all hover:scale-105 hover:border-dezara-red hover:bg-dezara-red sm:right-7 sm:flex sm:h-12 sm:w-12"
       >
         <ChevronRight className="h-6 w-6" />
       </button>

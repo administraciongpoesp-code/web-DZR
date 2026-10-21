@@ -56,9 +56,15 @@
     background-color: var(--color-dezara-white);
     color: var(--color-dezara-ink);
     font-family: var(--font-sans);
-    letter-spacing: 0.10em;
+    letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      letter-spacing: 0.10em;
+    }
   }
 
   body,

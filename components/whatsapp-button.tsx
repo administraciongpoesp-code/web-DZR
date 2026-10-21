@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -37,15 +38,28 @@ export function WhatsAppButton({
 
 /** Botón flotante persistente para mobile/desktop, con entrada animada sutil. */
 export function FloatingWhatsAppButton() {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => setHasScrolled(window.scrollY > 120);
+
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    return () => window.removeEventListener("scroll", updateVisibility);
+  }, []);
+
   return (
     <motion.a
       href={buildWhatsAppLink(WHATSAPP_MESSAGES.general)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Cotizar por WhatsApp"
-      initial={{ opacity: 0, scale: 0.6, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ delay: 0.8, duration: 0.4, ease: "easeOut" }}
+      initial={false}
+      animate={
+        hasScrolled
+          ? { opacity: 1, scale: 1, y: 0 }
+          : { opacity: 0, scale: 0.6, y: 12, pointerEvents: "none" }
+      }
       whileHover={{ scale: 1.06 }}
       whileTap={{ scale: 0.95 }}
       className={cn(
