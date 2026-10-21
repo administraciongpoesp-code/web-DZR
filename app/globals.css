@@ -1,11 +1,12 @@
+
 @import "tailwindcss";
 
 @theme {
-  /* Paleta de marca DZR — rojo / blanco / negro, uso disciplinado */
+  /* Identidad visual DZR */
   --color-dezara-red: #c8102e;
-  --color-dezara-red-dark: #b81e22;
+  --color-dezara-red-dark: #a50d25;
   --color-dezara-black: #0b0b0c;
-  --color-dezara-ink: #2b2e33;
+  --color-dezara-ink: #202124;
   --color-dezara-white: #ffffff;
   --color-dezara-fog: #f5f5f5;
   --color-dezara-mist: #8a8d93;
@@ -21,6 +22,7 @@
       opacity: 0;
       transform: translateY(24px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -31,6 +33,7 @@
     from {
       transform: translateX(0);
     }
+
     to {
       transform: translateX(-50%);
     }
@@ -38,31 +41,106 @@
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 88px;
   }
 
   body {
+    margin: 0;
+    min-height: 100%;
     background-color: var(--color-dezara-white);
     color: var(--color-dezara-ink);
+    font-family: var(--font-sans);
+    letter-spacing: 0.10em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body,
+  #__next {
+    min-width: 320px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-dezara-red);
+    color: var(--color-dezara-white);
   }
 
   :focus-visible {
     outline: 2px solid var(--color-dezara-red);
-    outline-offset: 2px;
+    outline-offset: 4px;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-display);
-    letter-spacing: 0.01em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  /* letter-spacing: 1rem; */
+  line-height: 1.08;
+}
+
+  img {
+    height: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer utilities {
+  .text-outline-black {
+    text-shadow:
+      -2px -2px 0 #000,
+      0 -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 0 0 #000,
+      2px 0 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 2px 0 #000,
+      0 4px 4px #000;
+  }
+
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
   }
 }
