@@ -80,7 +80,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate min-h-[760px] overflow-hidden bg-black text-white lg:h-svh lg:min-h-0"
+      className="relative isolate min-h-svh overflow-hidden bg-black text-white sm:min-h-[760px] lg:h-svh lg:min-h-0"
     >
       {/* Slider de fondo */}
       <div className="absolute inset-0 -z-30 overflow-hidden bg-black">
@@ -91,7 +91,7 @@ export function Hero() {
             animate={{ opacity: activeSlide === index ? 1 : 0 }}
             transition={{ duration: 1.1, ease: "easeInOut" }}
             aria-hidden="true"
-            className="absolute inset-0 sm:translate-x-[8%] lg:translate-x-[18%] xl:translate-x-[22%]"
+            className="absolute inset-x-0 bottom-0 top-[32%] sm:inset-0 sm:translate-x-[8%] lg:translate-x-[18%] xl:translate-x-[22%]"
           >
             <Image
               src={slide.src}
@@ -100,22 +100,26 @@ export function Hero() {
               priority={index === 0}
               sizes="100vw"
               quality={90}
-              className="object-cover object-[center_42%]"
+              className="object-cover object-center sm:object-[center_42%]"
             />
           </motion.div>
         ))}
       </div>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(90deg,#050506_0%,#050506_17%,rgba(5,5,6,0.96)_29%,rgba(5,5,6,0.82)_40%,rgba(5,5,6,0.52)_52%,rgba(5,5,6,0.22)_64%,rgba(5,5,6,0.06)_76%,rgba(5,5,6,0)_88%)]"
+        className="pointer-events-none absolute inset-0 -z-20 hidden bg-[linear-gradient(90deg,#050506_0%,#050506_17%,rgba(5,5,6,0.96)_29%,rgba(5,5,6,0.82)_40%,rgba(5,5,6,0.52)_52%,rgba(5,5,6,0.22)_64%,rgba(5,5,6,0.06)_76%,rgba(5,5,6,0)_88%)] sm:block"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_78%_48%,transparent_38%,rgba(0,0,0,0.2)_100%)]"
+        className="pointer-events-none absolute inset-0 -z-20 hidden bg-[radial-gradient(ellipse_at_78%_48%,transparent_38%,rgba(0,0,0,0.2)_100%)] sm:block"
       />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(0deg,rgba(5,5,6,0.72)_0%,rgba(5,5,6,0.14)_27%,transparent_62%,rgba(0,0,0,0.22)_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(180deg,#050506_0%,#050506_24%,rgba(5,5,6,0.98)_32%,rgba(5,5,6,0.84)_40%,rgba(5,5,6,0.54)_52%,rgba(5,5,6,0.2)_66%,transparent_82%)] sm:hidden"
       />
       <div
         aria-hidden="true"
@@ -134,10 +138,10 @@ export function Hero() {
         className="pointer-events-none absolute -right-10 top-[10%] -z-10 hidden h-[42rem] w-16 rotate-[28deg] bg-dezara-red/30 sm:block"
       />
       {/* Contenido principal */}
-      <div className="relative mx-auto flex w-full min-w-0 min-h-[760px] max-w-[1720px] flex-col px-5 pb-24 pt-28 sm:px-8 sm:pt-32 lg:h-full lg:min-h-0 lg:px-[5vw] lg:pb-16 lg:pt-24">
+      <div className="relative mx-auto flex w-full min-w-0 min-h-svh max-w-[1720px] flex-col px-5 pb-16 pt-28 sm:min-h-[760px] sm:px-8 sm:pb-24 sm:pt-32 lg:h-full lg:min-h-0 lg:px-[5vw] lg:pb-16 lg:pt-24">
         {/* Socio comercial */}
-        <div className="relative z-10 flex min-w-0 flex-col items-start gap-6 sm:gap-8 lg:gap-6">
-          <div className="flex items-center gap-3 sm:gap-4">
+        <div className="relative z-10 flex min-w-0 flex-col items-start gap-3 sm:gap-8 lg:gap-6">
+          <div className="-translate-y-7 flex items-center gap-3 sm:translate-y-0 sm:gap-4">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/70 bg-white p-1.5 shadow-[0_0_32px_rgba(255,255,255,0.16)] sm:h-14 sm:w-14">
               <Image
                 src={SPONSORED_TEAMS.primary.crest}
@@ -163,31 +167,44 @@ export function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
-            className="w-full min-w-0 max-w-[650px] text-[clamp(2.3rem,9vw,6.25rem)] font-black italic uppercase leading-[1] tracking-[-0.025em] text-white drop-shadow-[0_3px_24px_rgba(0,0,0,0.55)] sm:max-w-[700px] sm:text-[clamp(3.2rem,6.4vw,6.25rem)] sm:leading-[0.9]"
+            className="-mx-2 -translate-y-2 w-[calc(100%+1rem)] min-w-0 max-w-none text-center text-[clamp(1.55rem,7.6vw,2.55rem)] font-black italic uppercase leading-[0.98] tracking-[0.05em] text-white drop-shadow-[0_3px_24px_rgba(0,0,0,0.55)] sm:mx-0 sm:w-full sm:translate-y-0 sm:text-left sm:max-w-[700px] sm:text-[clamp(3.2rem,6.4vw,6.25rem)] sm:leading-[0.9] sm:tracking-[-0.005em]"
           >
-            EL NUEVO
-            <br />
-            UNIFORME DE
-            <br />
-            <span className="text-dezara-red">ALACRANES</span> DE
-            <br />
-            DURANGO
+            <span className="block whitespace-nowrap sm:hidden">
+              EL NUEVO UNIFORME DE
+            </span>
+            <span className="block whitespace-nowrap sm:hidden">
+              <span className="text-dezara-red">ALACRANES</span> DE DURANGO
+            </span>
+            <span className="hidden sm:block">
+              EL NUEVO
+              <br />
+              UNIFORME DE
+              <br />
+              <span className="text-dezara-red">ALACRANES</span> DE
+              <br />
+              DURANGO
+            </span>
           </motion.h1>
+          <p className="text-sm leading-6 text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] sm:hidden">
+            El jersey oficial fabricado por DZR para Alacranes de Durango,
+            equipo de la Liga de Expansión MX. Diseño, confección y calidad,
+            de principio a fin.
+          </p>
         </div>
 
         {/* Espacio central para apreciar a los jugadores */}
-        <div className="min-h-[100px] flex-1 sm:min-h-[140px] lg:min-h-0" />
+        <div className="min-h-[150px] flex-1 sm:min-h-[140px] lg:min-h-0" />
 
         {/* Descripción, características y botón */}
-        <div className="relative z-10 grid w-full min-w-0 items-center gap-8 border-t border-white/20 py-7 lg:grid-cols-[1.1fr_1fr_1.1fr] lg:gap-7 lg:border-t-0 lg:py-0">
-          <div className="max-w-[520px]">
+        <div className="relative z-10 grid w-full min-w-0 items-center gap-6 border-t-0 py-4 sm:gap-8 sm:border-t sm:border-white/20 sm:py-7 lg:grid-cols-[1.1fr_1fr_1.1fr] lg:gap-7 lg:border-t-0 lg:py-0">
+          <div className="hidden max-w-[520px] sm:block">
             <p className="text-sm leading-6 text-white sm:text-base sm:leading-7 lg:text-[17px]">
               El jersey oficial fabricado por DZR para Alacranes de Durango,
               equipo de la Liga de Expansión MX. Diseño, confección y calidad,
               de principio a fin.
             </p>
 
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-5 hidden items-center gap-3 sm:flex">
               <span className="h-px w-9 bg-red-600" />
               <span className="text-[9px] font-bold uppercase tracking-[0.12em] text-white">
                 Orgullo duranguense
@@ -221,7 +238,7 @@ export function Hero() {
           </div>
 
           {/* Botón de WhatsApp */}
-          <div className="flex justify-start lg:justify-end">
+          <div className="hidden justify-start lg:flex lg:justify-end">
             <WhatsAppButton
               size="lg"
               message="jersey"
@@ -270,7 +287,11 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-dezara-red/80" />
+      <div className="absolute bottom-0 left-0 right-0 hidden h-px bg-dezara-red/80 sm:block" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-[linear-gradient(180deg,transparent,rgba(200,16,46,0.18)_55%,rgba(200,16,46,0.32))] sm:hidden"
+      />
     </section>
   );
 }

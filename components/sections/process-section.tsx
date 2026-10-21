@@ -49,7 +49,7 @@ export function ProcessSection() {
               Cómo trabajamos
             </p>
 
-            <h2 className="text-4xl font-black uppercase leading-[0.98] sm:text-5xl lg:text-6xl">
+            <h2 className="text-outline-black text-4xl font-black uppercase leading-[0.98] sm:text-5xl lg:text-6xl">
               Nuestro <span className="text-red-600">proceso</span>
             </h2>
           </div>
@@ -93,7 +93,7 @@ export function ProcessSection() {
                     </span>
                   </div>
 
-                  <h3 className="max-w-[220px] text-base font-black uppercase leading-snug text-white sm:text-lg">
+                  <h3 className="text-outline-black max-w-[220px] font-sans text-[15px] font-bold uppercase leading-snug tracking-[0.02em] text-white sm:font-display sm:text-lg sm:font-normal sm:tracking-normal">
                     {step.title}
                   </h3>
 

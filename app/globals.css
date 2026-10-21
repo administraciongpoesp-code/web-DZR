@@ -56,6 +56,7 @@
     background-color: var(--color-dezara-white);
     color: var(--color-dezara-ink);
     font-family: var(--font-sans);
+    letter-spacing: 0.10em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -122,6 +123,19 @@
 }
 
 @layer utilities {
+  .text-outline-black {
+    text-shadow:
+      -2px -2px 0 #000,
+      0 -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 0 0 #000,
+      2px 0 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 2px 0 #000,
+      0 4px 4px #000;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

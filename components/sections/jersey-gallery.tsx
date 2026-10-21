@@ -59,7 +59,7 @@ export function JerseyGallery() {
               DZR / Alacranes
             </p>
 
-            <h2 className="text-balance text-4xl font-black uppercase leading-[1.12] sm:text-5xl lg:text-6xl">
+            <h2 className="text-outline-black text-balance text-4xl font-black uppercase leading-[1.12] sm:text-5xl lg:text-6xl">
               Todos los ángulos del{" "}
               <span className="text-red-600">uniforme</span>
             </h2>
@@ -123,7 +123,7 @@ export function JerseyGallery() {
             size="lg"
             message="jersey"
             label="Preguntar por el jersey de Alacranes"
-            className="min-h-12"
+            className="h-11 min-h-11 self-center px-4 text-xs sm:h-14 sm:min-h-12 sm:self-auto sm:px-8 sm:text-base"
           />
         </div>
       </div>
