@@ -1,9 +1,12 @@
+
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  ArrowDown,
+  ChevronLeft,
+  ChevronRight,
   Layers,
   ShieldCheck,
   Star,
@@ -12,209 +15,262 @@ import {
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { SPONSORED_TEAMS } from "@/lib/constants";
 
-const HERO_BACKGROUND = "/images/inicio_estadio.jpg";
-const HERO_PLAYERS = "/images/alacranes/alacranes21.jpg";
+const HERO_SLIDES = [
+  {
+    src: "/images/alacranes/alacranes21.jpg",
+    alt: "Jugadores de Alacranes de Durango",
+  },
+  {
+    src: "/images/alacranes/alacranes22.jpg",
+    alt: "Jugadores de Alacranes de Durango",
+  },
+  {
+    src: "/images/alacranes/alacranes23.jpg",
+    alt: "Jugadores de Alacranes de Durango",
+  },
+  {
+    src: "/images/alacranes/alacranes24.jpg",
+    alt: "Equipo de Alacranes de Durango en cancha",
+  },
+  {
+    src: "/images/alacranes/alacranes25.jpg",
+    alt: "Jugadores de Alacranes de Durango con su uniforme",
+  },
+];
+
+const FEATURES = [
+  {
+    icon: Layers,
+    title: "Materiales",
+    description: "Ligeros y transpirables",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Diseño",
+    description: "Personalizado",
+  },
+  {
+    icon: Star,
+    title: "Fabricación",
+    description: "Profesional",
+  },
+];
 
 export function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % HERO_SLIDES.length);
+    }, 6000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const previousSlide = () => {
+    setActiveSlide(
+      (current) => (current - 1 + HERO_SLIDES.length) % HERO_SLIDES.length
+    );
+  };
+
+  const nextSlide = () => {
+    setActiveSlide((current) => (current + 1) % HERO_SLIDES.length);
+  };
+
   return (
     <section
       id="inicio"
-      className="relative isolate min-h-[calc(100vh+40px)] overflow-hidden bg-black text-white"
+      className="relative isolate min-h-[760px] overflow-hidden bg-black text-white lg:h-svh lg:min-h-0"
     >
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <Image
-          src={HERO_BACKGROUND}
-          alt=""
-          fill
-          priority
-          className="scale-105 object-cover blur-[3px]"
-        />
-
-        <div className="absolute inset-0 bg-black/15" />
-
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-
-        <div className="absolute inset-0 bg-red-950/5 mix-blend-multiply" />
-      </div>
-
-      <div
-        className="pointer-events-none absolute inset-0 z-[1] opacity-[0.07]"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.25) 1px, transparent 1px)
-          `,
-          backgroundSize: "70px 70px",
-        }}
-      />
-
-      <div className="absolute right-[34%] top-0 z-[2] h-[150px] w-[80px] -skew-x-[14deg] bg-red-600/85" />
-
-      <div className="absolute right-[4%] top-[58%] z-[2] h-[260px] w-[65px] -skew-x-[12deg] bg-red-600/75" />
-
-      <div className="absolute bottom-0 left-[5%] z-[2] h-[2px] w-[380px] bg-red-600/70" />
-
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh+40px)] max-w-[1500px] items-center px-6 py-12 sm:px-10 lg:px-16">
-        <div className="grid w-full items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      {/* Slider de fondo */}
+      <div className="absolute inset-0 -z-30 overflow-hidden bg-black">
+        {HERO_SLIDES.map((slide, index) => (
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative z-20 max-w-[650px]"
+            key={slide.src}
+            initial={false}
+            animate={{ opacity: activeSlide === index ? 1 : 0 }}
+            transition={{ duration: 1.1, ease: "easeInOut" }}
+            aria-hidden="true"
+            className="absolute inset-0 sm:translate-x-[8%] lg:translate-x-[18%] xl:translate-x-[22%]"
           >
-            <h1 className="mt-6 font-black uppercase leading-[0.98] tracking-[-0.02em] sm:mt-0">
-              <span className="block text-[clamp(2.5rem,11vw,5.4rem)]">
-                El nuevo uniforme de
-              </span>
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              quality={90}
+              className="object-cover object-[center_42%]"
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(90deg,#050506_0%,#050506_17%,rgba(5,5,6,0.96)_29%,rgba(5,5,6,0.82)_40%,rgba(5,5,6,0.52)_52%,rgba(5,5,6,0.22)_64%,rgba(5,5,6,0.06)_76%,rgba(5,5,6,0)_88%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_78%_48%,transparent_38%,rgba(0,0,0,0.2)_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(0deg,rgba(5,5,6,0.72)_0%,rgba(5,5,6,0.14)_27%,transparent_62%,rgba(0,0,0,0.22)_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_70%_100%,rgba(200,16,46,0.22),transparent_42%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-12 top-[17%] -z-10 hidden h-[22rem] w-14 -rotate-[28deg] bg-dezara-red/90 sm:left-[27%] sm:top-[7%] sm:block sm:h-[34rem] sm:w-10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-6 top-[22%] -z-10 hidden h-[19rem] w-3 -rotate-[28deg] bg-dezara-red/55 sm:left-[30%] sm:top-[8%] sm:block sm:h-[29rem] sm:w-4"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-10 top-[10%] -z-10 hidden h-[42rem] w-16 rotate-[28deg] bg-dezara-red/30 sm:block"
+      />
+      {/* Contenido principal */}
+      <div className="relative mx-auto flex w-full min-w-0 min-h-[760px] max-w-[1720px] flex-col px-5 pb-24 pt-28 sm:px-8 sm:pt-32 lg:h-full lg:min-h-0 lg:px-[5vw] lg:pb-16 lg:pt-24">
+        {/* Socio comercial */}
+        <div className="relative z-10 flex min-w-0 flex-col items-start gap-6 sm:gap-8 lg:gap-6">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/70 bg-white p-1.5 shadow-[0_0_32px_rgba(255,255,255,0.16)] sm:h-14 sm:w-14">
+              <Image
+                src={SPONSORED_TEAMS.primary.crest}
+                alt={SPONSORED_TEAMS.primary.crestAlt}
+                width={64}
+                height={64}
+                className="h-full w-full object-contain"
+              />
+            </div>
 
-              <span className="block text-[clamp(2.5rem,11vw,5.4rem)]">
-                <span className="text-red-600">Alacranes</span>{" "}
-                de Durango
-              </span>
-            </h1>
+            <div className="border-l border-white/35 pl-4">
+              <p className="text-[9px] font-medium uppercase leading-tight text-white sm:text-[10px]">
+                Socio comercial oficial de
+              </p>
+              <p className="mt-1 text-xs font-black uppercase leading-tight text-white sm:text-sm">
+                Alacranes de Durango
+              </p>
+            </div>
+          </div>
 
-            <p className="mt-7 max-w-[590px] text-base leading-7 text-white/85 sm:text-lg">
+          {/* Título principal */}
+          <motion.h1
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            className="w-full min-w-0 max-w-[650px] text-[clamp(2.3rem,9vw,6.25rem)] font-black italic uppercase leading-[1] tracking-[-0.025em] text-white drop-shadow-[0_3px_24px_rgba(0,0,0,0.55)] sm:max-w-[700px] sm:text-[clamp(3.2rem,6.4vw,6.25rem)] sm:leading-[0.9]"
+          >
+            EL NUEVO
+            <br />
+            UNIFORME DE
+            <br />
+            <span className="text-dezara-red">ALACRANES</span> DE
+            <br />
+            DURANGO
+          </motion.h1>
+        </div>
+
+        {/* Espacio central para apreciar a los jugadores */}
+        <div className="min-h-[100px] flex-1 sm:min-h-[140px] lg:min-h-0" />
+
+        {/* Descripción, características y botón */}
+        <div className="relative z-10 grid w-full min-w-0 items-center gap-8 border-t border-white/20 py-7 lg:grid-cols-[1.1fr_1fr_1.1fr] lg:gap-7 lg:border-t-0 lg:py-0">
+          <div className="max-w-[520px]">
+            <p className="text-sm leading-6 text-white sm:text-base sm:leading-7 lg:text-[17px]">
               El jersey oficial fabricado por DZR para Alacranes de Durango,
-              equipo de la Liga de Expansión MX. Diseño, confección y
-              calidad, de principio a fin.
+              equipo de la Liga de Expansión MX. Diseño, confección y calidad,
+              de principio a fin.
             </p>
 
-            <div className="mt-9 grid max-w-[620px] grid-cols-3 gap-1 sm:gap-4">
-              <div className="flex min-w-0 items-center gap-1 sm:gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
-                  <Layers className="h-3.5 w-3.5 text-red-500 sm:h-5 sm:w-5" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-[8px] font-bold uppercase leading-3 sm:text-[11px] sm:leading-4">
-                    Materiales
-                  </p>
-
-                  <p className="text-[7px] font-bold uppercase leading-[0.65rem] text-white/70 sm:text-[10px] sm:leading-4">
-                    Ligeros y transpirables
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex min-w-0 items-center gap-1 sm:gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
-                  <ShieldCheck className="h-3.5 w-3.5 text-red-500 sm:h-5 sm:w-5" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-[8px] font-bold uppercase leading-3 sm:text-[11px] sm:leading-4">
-                    Diseño
-                  </p>
-
-                  <p className="text-[7px] font-bold uppercase leading-[0.65rem] text-white/70 sm:text-[10px] sm:leading-4">
-                    Personalizado
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex min-w-0 items-center gap-1 sm:gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-red-600 bg-black/35 sm:h-12 sm:w-12">
-                  <Star className="h-3.5 w-3.5 text-red-500 sm:h-5 sm:w-5" />
-                </div>
-
-                <div className="min-w-0">
-                  <p className="text-[8px] font-bold uppercase leading-3 sm:text-[11px] sm:leading-4">
-                    Fabricación
-                  </p>
-
-                  <p className="text-[7px] font-bold uppercase leading-[0.65rem] text-white/70 sm:text-[10px] sm:leading-4">
-                    Profesional
-                  </p>
-                </div>
-              </div>
+            <div className="mt-5 flex items-center gap-3">
+              <span className="h-px w-9 bg-red-600" />
+              <span className="text-[9px] font-bold uppercase tracking-[0.12em] text-white">
+                Orgullo duranguense
+              </span>
             </div>
+          </div>
 
-            <div className="mt-9">
-              <WhatsAppButton />
-            </div>
-          </motion.div>
+          {/* Características */}
+          <div className="grid grid-cols-3 gap-3 sm:gap-5 lg:border-x lg:border-white/25 lg:px-6">
+            {FEATURES.map(({ icon: Icon, title, description }) => (
+              <div
+                key={title}
+                className="flex min-w-0 flex-col items-center text-center"
+              >
+                <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full border border-red-600/80 bg-black/45 shadow-[0_0_24px_rgba(200,16,46,0.14)] sm:h-12 sm:w-12">
+                  <Icon
+                    className="h-5 w-5 text-white"
+                    aria-hidden="true"
+                  />
+                </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96, x: 30 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative flex min-h-[520px] items-center justify-center lg:min-h-[650px]"
-          >
-            <div className="absolute right-[5%] top-[7%] z-[3] h-[82%] w-[82%] rounded-[26px] border border-white/15" />
-
-            <div className="absolute right-[2%] top-[4%] z-[3] h-[87%] w-[82%] rounded-[26px] border border-white/10" />
-
-            <div className="absolute right-[5%] top-[-2%] z-[4] h-[135px] w-[88px] -skew-x-[14deg] bg-red-600/85" />
-
-            <div className="relative z-10 h-[490px] w-full max-w-[700px] overflow-hidden rounded-[25px] border border-white/25 bg-black/10 shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:h-[560px] lg:h-[630px]">
-              <Image
-                src={HERO_PLAYERS}
-                alt="Jugadores de Alacranes de Durango con el uniforme oficial"
-                fill
-                priority
-                className="object-cover object-center"
-              />
-
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/55 to-transparent" />
-            </div>
-
-            <div className="absolute right-[8%] top-[8%] z-30">
-              <p className="text-xs font-bold uppercase tracking-[0.2em]">
-                Orgullo
-              </p>
-
-              <p className="text-xs font-bold uppercase tracking-[0.2em]">
-                Duranguense
-              </p>
-
-              <div className="mt-3 h-[2px] w-14 bg-red-600" />
-            </div>
-
-            <div className="absolute bottom-[3%] right-[-1%] z-30 flex items-center gap-3 rounded-xl border border-white/10 bg-black/80 px-5 py-3 shadow-xl backdrop-blur-md">
-              <div className="relative h-12 w-12 shrink-0 rounded-full bg-white p-1">
-                <Image
-                  src={SPONSORED_TEAMS.primary.crest}
-                  alt={SPONSORED_TEAMS.primary.crestAlt}
-                  fill
-                  className="object-contain p-1"
-                />
-              </div>
-
-              <div>
-                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/65">
-                  Socio comercial oficial de
+                <p className="font-sans text-xs font-bold uppercase tracking-[0.06em] sm:text-sm">
+                  {title}
                 </p>
 
-                <p className="text-xs font-black uppercase tracking-[0.08em]">
-                  Alacranes de Durango
+                <p className="mt-1 text-center font-sans text-xs leading-5 text-white sm:text-sm">
+                  {description}
                 </p>
               </div>
-            </div>
+            ))}
+          </div>
 
-            <div className="absolute bottom-[4%] left-[1%] z-[20] h-[100px] w-[35px] -skew-x-[14deg] bg-red-600" />
-          </motion.div>
+          {/* Botón de WhatsApp */}
+          <div className="flex justify-start lg:justify-end">
+            <WhatsAppButton
+              size="lg"
+              message="jersey"
+              label="Preguntar por el jersey de Alacranes"
+              className="min-h-14 w-full max-w-[430px] justify-center text-sm sm:text-base"
+            />
+          </div>
         </div>
       </div>
 
-      <motion.a
-        href="#sponsorship-section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-7 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center gap-2 text-white/70 transition-colors hover:text-white"
+      {/* Flecha anterior */}
+      <button
+        type="button"
+        onClick={previousSlide}
+        aria-label="Imagen anterior"
+        className="absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/45 bg-black/35 text-white shadow-lg backdrop-blur-md transition-all hover:scale-105 hover:border-dezara-red hover:bg-dezara-red sm:left-7 sm:h-12 sm:w-12"
       >
-        <span className="text-[9px] font-bold uppercase tracking-[0.3em]">
-          Explorar
-        </span>
+        <ChevronLeft className="h-6 w-6" />
+      </button>
 
-        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-black/20">
-          <ArrowDown className="h-4 w-4" />
-        </div>
-      </motion.a>
+      {/* Flecha siguiente */}
+      <button
+        type="button"
+        onClick={nextSlide}
+        aria-label="Imagen siguiente"
+        className="absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/45 bg-black/35 text-white shadow-lg backdrop-blur-md transition-all hover:scale-105 hover:border-dezara-red hover:bg-dezara-red sm:right-7 sm:h-12 sm:w-12"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
 
-      <div className="absolute bottom-0 left-0 right-0 z-20 h-px bg-red-600/70" />
+      {/* Indicadores del slider */}
+      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
+        {HERO_SLIDES.map((slide, index) => (
+          <button
+            key={slide.src}
+            type="button"
+            onClick={() => setActiveSlide(index)}
+            aria-label={`Mostrar imagen ${index + 1}`}
+            aria-current={activeSlide === index ? "true" : undefined}
+            className={`h-1.5 transition-all duration-300 ${
+              activeSlide === index
+                ? "w-9 bg-dezara-red"
+                : "w-4 bg-white/70 hover:bg-white"
+            }`}
+          />
+        ))}
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-dezara-red/80" />
     </section>
   );
 }

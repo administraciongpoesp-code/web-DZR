@@ -1,43 +1,118 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardCheck, PenTool, ShieldCheck, ShirtIcon, Users } from "lucide-react";
+import {
+  ClipboardCheck,
+  PenTool,
+  ShieldCheck,
+  Shirt,
+  Users,
+} from "lucide-react";
 
-import { RayPattern } from "@/components/ray-pattern";
-import { SectionHeading } from "@/components/section-heading";
 import { PROCESS_STEPS } from "@/lib/constants";
 
-const ICONS = [Users, PenTool, ShirtIcon, ShieldCheck, ClipboardCheck];
+const ICONS = [Users, PenTool, Shirt, ShieldCheck, ClipboardCheck];
 
 export function ProcessSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
-      <RayPattern id="process-pattern" />
+    <section
+      id="proceso"
+      className="relative isolate overflow-hidden bg-black py-20 text-white sm:py-28 lg:py-32"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.045]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px)",
+          backgroundSize: "70px 70px",
+        }}
+      />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Cómo trabajamos" title="Nuestro proceso" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 top-0 -z-10 h-96 w-96 rounded-full bg-red-700/15 blur-[120px]"
+      />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {PROCESS_STEPS.map((step, index) => {
-            const Icon = ICONS[index];
-            return (
-              <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-                className="relative rounded-xl border border-dezara-mist/15 bg-dezara-fog p-6"
-              >
-                <span className="absolute right-4 top-4 text-3xl font-display text-dezara-mist/25">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <Icon className="h-8 w-8 text-dezara-red" aria-hidden />
-                <h3 className="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-dezara-ink">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-dezara-mist">{step.description}</p>
-              </motion.div>
-            );
-          })}
+      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+        {/* Encabezado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end"
+        >
+          <div>
+            <p className="mb-4 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-red-500 sm:text-xs">
+              <span className="h-px w-9 bg-red-600" />
+              Cómo trabajamos
+            </p>
+
+            <h2 className="text-4xl font-black uppercase leading-[0.98] sm:text-5xl lg:text-6xl">
+              Nuestro <span className="text-red-600">proceso</span>
+            </h2>
+          </div>
+
+          <p className="max-w-sm text-sm leading-7 text-white/50 sm:text-base">
+            Cada etapa forma parte del trabajo que hay detrás de cada prenda.
+          </p>
+        </motion.div>
+
+        {/* Línea visual del proceso */}
+        <div className="relative">
+          <div
+            aria-hidden="true"
+            className="absolute left-0 right-0 top-7 hidden h-px bg-white/15 lg:block"
+          />
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {PROCESS_STEPS.map((step, index) => {
+              const Icon = ICONS[index] ?? ClipboardCheck;
+
+              return (
+                <motion.article
+                  key={step.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.07,
+                    ease: "easeOut",
+                  }}
+                  className="group relative flex min-h-[270px] flex-col border border-white/10 bg-white/[0.035] p-5 transition-colors duration-300 hover:border-red-600/60 hover:bg-white/[0.055] sm:p-6"
+                >
+                  <div className="relative z-10 mb-8 flex items-center justify-between">
+                    <span className="flex h-14 w-14 items-center justify-center border border-white/15 bg-black text-red-500 transition-colors duration-300 group-hover:border-red-600 group-hover:bg-red-600 group-hover:text-white">
+                      <Icon className="h-6 w-6" aria-hidden="true" />
+                    </span>
+
+                    <span className="font-display text-4xl text-white/15 transition-colors group-hover:text-red-600/70">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  <h3 className="max-w-[220px] text-base font-black uppercase leading-snug text-white sm:text-lg">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-white/50">
+                    {step.description}
+                  </p>
+
+                  <div className="mt-auto pt-7">
+                    <div className="h-[2px] w-8 bg-red-600 transition-all duration-300 group-hover:w-full" />
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-8 flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.22em] text-white/35 sm:text-[10px]">
+          <span className="h-px w-7 bg-red-600" />
+          DZR · Diseño, confección y calidad
         </div>
       </div>
     </section>
